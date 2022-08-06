@@ -43,11 +43,14 @@ sb.append("Hello").append(" World"); // append는 계속 붙이면서 사용가�
 - StringBuffer : Thread-safe하다
 - StringBuilder : Thread-safe하지 않다. 속도는 더 빠르다.
 
+
 <aside>
-💡 일반적으로 한 메소드 내부에서만 사용한다면 StringBuilder을 사용해도 문제 없다.
-반면에, 여러 Thread에서 동시 접근하는 일이 생긴다면 StringBuffer를 사용해야 한다.
+    
+    💡 일반적으로 한 메소드 내부에서만 사용한다면 StringBuilder을 사용해도 문제 없다.
+    반면에, 여러 Thread에서 동시 접근하는 일이 생긴다면 StringBuffer를 사용해야 한다.
 
 </aside>
+
 
 - String 더하기 연산을 할 경우, 컴파일 할때 자동으로 해당 연산을 StringBuilder로 변환해 준다.(JDK 5부터) 단, for루프 같은 반복 연산을 할 땐 자동으로 변환해주지 않는다.
 - String, StringBufer, StringBuilder 모두 CharSequence 인터페이스를 상속받으므로
