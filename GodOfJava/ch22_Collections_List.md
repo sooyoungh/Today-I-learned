@@ -1,17 +1,20 @@
 # ch22 : Collections - List
 
 **목차**
-1. [Collections - List]
-2. [배열(array)과 ArrayList의 차이점](#배열(array)과-ArrayList의-차이점)
+1. [Collections](#collections)
+2. [배열(array)과 ArrayList의 차이점](#배열과-arraylist의-차이점)
 3. [ArrayList](#arraylist)
-4. [Stack](#Stack)
+4. [Stack](#stack)
+
+## Collections
+![image](https://user-images.githubusercontent.com/77563814/184531240-4a053ea3-17cc-40ec-b46f-c5752c36fb3e.png)
 
 
-## 배열(array)과 ArrayList의 차이점
+## 배열과 ArrayList의 차이점
 
 배열(array)과 ArrayList의 차이점은 **크기가 고정적/가변적**이라는 점이다.
 
-ArrayList는 선언시에 크기를 정해줄 수도 있지만, 원소를 추가하면서 해당 크기가 넘을 경우 동적으로 크기를 늘려준다.
+ArrayList는 선언시에 크기를 정해줄 수 있지만, 원소를 추가하면서 해당 크기가 넘을 경우 동적으로 크기를 늘려준다. (ArrayList는 선언시에 크기를 안 정해주어도 된다.)
 
 [참고](https://zorba91.tistory.com/287) → **실제로는 가지고 있던 용량이 꽉 찼을 때, 용량이 기존의 1.5배를 늘린 새로운 배열에 기존 배열을 copy하는 것이다.**
 
