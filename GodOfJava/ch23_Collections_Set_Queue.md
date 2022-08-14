@@ -1,11 +1,14 @@
 # ch23 : Collections - Set, Queue
 
 **목차**
-1. [Collections - Set, Queue]
-2. [Set](#Set)
-3. [Queue](#Queue)
-4. [LinkedList](#LinkedList)
+1. [Collections](#collections)
+2. [Set](#set)
+3. [Queue](#queue)
+4. [LinkedList](#linkedlist)
 
+## Collections
+
+![image](https://user-images.githubusercontent.com/77563814/184531336-763b525c-7110-41cc-9171-6c6b0957be0a.png)
 
 
 ## Set
