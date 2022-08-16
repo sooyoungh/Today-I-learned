@@ -129,3 +129,5 @@ UTF-8은 가변 길이를 지원하여 각 언어별로 최적화된 크기에 �
 
 ## Reference
 - https://dev.epiloum.net/164
+- https://blog.naver.com/PostView.nhn?blogId=pjok1122&logNo=221505713248&categoryNo=29&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView
+- https://onlywis.tistory.com/2
