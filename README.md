@@ -5,3 +5,4 @@
 
 ## 🔎 Java
 - [Switch문은 if문보다 빠른가? (인코딩 방식 비교)](/java/switch_encoding.md)
+- [문자열 인코딩 방식 알아보기 - Java](/java/encoding.md)
