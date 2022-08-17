@@ -31,7 +31,8 @@ case 조건값이 연속적이거나 case가 3개 이상이면 Switch를 사용�
 
 <aside>
   
-    ✏️  Switch문에서 각 조건들을 인덱스로 하는 jump table을 생성하여 처리하는 방식. 이때, 각 조건들을 범위로 인데싱하여 속도가 빠르다.
+    ✏️  Switch문에서 각 조건들을 인덱스로 하는 jump table을 생성하여 처리하는 방식. 
+	     이때, 각 조건들을 범위로 인데싱하여 속도가 빠르다.
 
 </aside>
 
@@ -101,7 +102,9 @@ switch문에 **비교할 변수**가 들어오면, 이 jump table을 통해서 �
 
 <aside>
   
-    ✏️ Switch문에서 각 조건들을 jump table로 인덱싱하여 처리하는 방식. 이때, 조건값을 범위로 인덱싱하지 않는다. 따라서 Switch문에 들어온 변수와 jump table의 인덱스를 비교연산하여 jump table에 접근한다.
+    ✏️ Switch문에서 각 조건들을 jump table로 인덱싱하여 처리하는 방식. 
+	    이때, 조건값을 범위로 인덱싱하지 않는다. 
+	    따라서 Switch문에 들어온 변수와 jump table의 인덱스를 비교연산하여 jump table에 접근한다.
 
 </aside>
 
