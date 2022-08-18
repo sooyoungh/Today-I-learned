@@ -1,12 +1,12 @@
-# 자바에 Call By Value만 있는 이유 (JVM의 GC)
+# 자바에 Call By Value만 있는 이유 - JVM의 GC
 
 **목차**
 
-1. [Call by Value와 Call by Reference이란?](#call-by-value와-vall-by-reference이란)
+1. [Call by Value와 Call by Reference이란?](#call-by-value와-call-by-reference이란)
 2. [자바에 포인터가 없는 이유](#자바에-포인터가-없는-이유)
-3. [C++의 Call By Value와 Call By Reference](#c++의-call-by-value와-call-by-reference)
+3. [C++의 Call By Value와 Call By Reference](#c의-call-by-value와-call-by-reference)
 4. [Java의 Call By Value](#java의-call-by-value)
-5. [자바에서도 Call By Reference 흉내는 낼 수 있다.](#자바에서도-call-by-reference-흉내는-낼-수-있다.)
+5. [자바에서도 Call By Reference 흉내는 낼 수 있다.](#자바에서도-call-by-reference-흉내는-낼-수-있다)
 6. [정리하면](#정리하면)
 
 자바에는 Call by Reference가 없고 Call by Value만 있다. 이유를 C++이랑 비교해서 알아보자. 
@@ -186,3 +186,7 @@ public class Test {
 - [https://you88.tistory.com/34](https://you88.tistory.com/34)
 - [https://sorjfkrh5078.tistory.com/278](https://sorjfkrh5078.tistory.com/278)
 - [https://deveric.tistory.com/92](https://deveric.tistory.com/92)
+
+
+
+[위로 가기⬆](#자바에-call-by-value만-있는-이유---jvm의-gc)
