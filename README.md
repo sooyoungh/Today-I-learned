@@ -8,4 +8,5 @@
 - [문자열 인코딩 방식 알아보기 - Java](/java/encoding.md)
 - [자바에 Call By Value만 있는 이유 (JVM의 GC)](/java/call_by_value.md)
 - [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
+- [Java에서의 Singleton 패턴](/java/singleton.md)
 
