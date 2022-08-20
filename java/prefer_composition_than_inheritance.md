@@ -4,11 +4,16 @@
 
 1. [상속의 문제점?](#상속의-문제점)
 2. [컴포지션을 쓰자](#컴포지션을-쓰자)
-3. [정리하면](#정리하면)
+3. [상속과 컴포지션](#상속과-컴포지션)
+4. [정리하면](#정리하면)
 
 상속보다 컴포지션을 사용하는 게 좋은 이유를 알아보자.
 
 우선 상속과 컴포지션은 다음과 같다.
+
+![image](https://user-images.githubusercontent.com/77563814/185729802-9a1529e8-ec07-4700-a673-6360d87ca4ed.png)
+
+
 
 - 상속 : 부모 클래스를 자식클래스가 재사용+확장하는 것 (IS-A 관계)
 - 컴포지션 : 기존 클래스가 새로운 클래스의 구성요소가 되는 것 (HAS-A 관계)
@@ -78,12 +83,15 @@ Engine 클래스의 코드를 재사용하려면, engine 인스턴스의 메소�
 
 The composition also provides code reusability but the difference here is we do not extend the class for this. [참고 링크](https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse)
 
-## 정리하면
 
-- 상속은 코드 재사용+확장할 수 있으나, 상속관계에서 문제가 발생할 수 있으니 확실한 is-a 관계일 때만 상속을 사용하자.
-- 단순 기능을 재사용하고자 한다면(has-a 관계), 컴포지션을 사용하자. 컴포지션은 코드 재사용만 하고 확장할 수 없어 여러 문제에서 자유롭다.
-  
+## 상속과 컴포지션
 
+상속과 컴포지션을 적절하게 사용하면 다음과 같다.
+
+![image](https://user-images.githubusercontent.com/77563814/185729831-cafd989e-c1b1-4651-bd80-d5701716d243.png)
+
+- Engine 기능을 재사용하기 위해서 Car은 컴포지션을 사용했다.
+- Tesla는 Car의 기능을 재사용 + 확장하기 위해서 상속 받았다.
 - **is-a 와 has-a 관계 비교**
   - **"is-a"** relationship (재사용+확장)
     - a senior citizen is a citizen
@@ -91,6 +99,13 @@ The composition also provides code reusability but the difference here is we do 
   - “**has-a"** relationship (기능만 받겠다)
     - a car has an engine, a transmission, gas tank
     - a Manager has a PayrollID
+
+## 정리하면
+
+- 상속은 코드 재사용+확장할 수 있으나, 상속관계에서 문제가 발생할 수 있으니 확실한 is-a 관계일 때만 상속을 사용하자.
+- 단순 기능을 재사용하고자 한다면(has-a 관계), 컴포지션을 사용하자. 컴포지션은 코드 재사용만 하고 확장할 수 없어 여러 문제에서 자유롭다.
+  
+
 
 **상속 관계는 필요할 때만 사용하자 → 인터페이스나 컴포지션을 쓰자**
 
