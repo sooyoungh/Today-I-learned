@@ -1,0 +1,105 @@
+# 상속보다는 컴포지션을 사용하자
+
+**목차**
+
+1. [상속의 문제점?](#상속의-문제점)
+2. [컴포지션을 쓰자](#컴포지션을-쓰자)
+3. [정리하면](#정리하면)
+
+상속보다 컴포지션을 사용하는 게 좋은 이유를 알아보자.
+
+우선 상속과 컴포지션은 다음과 같다.
+
+- 상속 : 부모 클래스를 자식클래스가 재사용+확장하는 것 (IS-A 관계)
+- 컴포지션 : 기존 클래스가 새로운 클래스의 구성요소가 되는 것 (HAS-A 관계)
+
+상속은 부모 클래스의 메소드를 재사용+확장할 수 있다. 컴포지션은 코드 재사용만 하고, 부모 메소드를 확장할 수는 없다.
+
+상속 관계에서는 여러 문제가 발생하기도 한다.
+
+## 상속의 문제점?
+
+다음과 같은 상황이 있을 수 있다.
+
+```java
+public class Engine {
+    protected int engineCapacity;
+
+		public Engine(int engineCapacity) {
+        this.engineCapacity = engineCapacity;
+    }
+
+    public startEngine() {
+        // engineCapacity 사용해서 기능 처리
+    }
+}
+
+public class Car extends Engine {
+    ...
+
+    public Car(int engineCapacity, ...) {
+        super(engineCapacity);
+        // 상위 Engine 클래스의 변수/메소드 사용해서 기능 처리
+    }
+
+		public long func(Engine engine) {
+        //
+    }
+}
+```
+
+이 경우 하위 클래스가 상위 클래스에 강하게 결합, 의존하게 된다. 캡슐화를 깨뜨린다(즉, 상위 클래스의 구현이 하위 클래스에 노출된다). 이 구조는 몇 가지 문제가 생길 수 있다.
+
+- 만약 부모클래스에서 수정하면, 자식 클래스도 일일이 모두 수정해주어야 한다. 따라서 변경에 유연하지 못하다.
+- 부모 클래스 메소드 사이의 로직을 모르고 자식 클래스에서 오버라이딩한다면, 자식 클래스의 메소드가 원하지 않게 잘못 동작할 수 있다.
+
+이를 해결하기 위해 컴포지션을 사용하자.
+
+## 컴포지션을 쓰자
+
+<aside>
+
+        🌟 기존 클래스를 private 인스턴스로 만들어서 새로운 클래스에서 참조하는 방식.
+            즉, 기존 클래스가 새로운 클래스의 구성요소로 쓰인다
+
+</aside>
+
+Car클래스에 Engine 클래스가 인스턴스로 들어가있다.
+
+```java
+public class Car {
+    private Engine engine; // 컴포지션
+}
+```
+
+Engine 인스턴스의 메소드를 호출하는 방식으로 동작한다. 기존 클래스(Engine 클래스)의 코드가 바뀌더라도 새로운 클래스(Car)의 영향이 적다. 클래스 간 의존 관계가 없으니, 상위 클래스의 코드가 바뀌어서 하위 클래스의 코드를 다시 변경해주어야 하는 방식이 아니다. 메소드 호출을 통해 사용하면 된다. 변경에 유연하고 안전하다.
+
+## 정리하면
+
+- 상속은 코드 재사용+확장할 수 있으나, 상속관계에서 문제가 발생할 수 있다.
+- 따라서 확실한 is-a 관계일 때만 상속을 사용하자.
+- has-a 관계 즉, 단순 기능을 재사용하고자 한다면(코드 재사용) 컴포지션을 사용하자. 컴포지션은 코드 재사용만 하고 확장할 수 없어 여러 문제에서 자유롭다.
+  The composition also provides code reusability but the difference here is we do not extend the class for this. [참고 링크](https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse)
+- **is-a 와 has-a 관계 비교**
+  - **"is-a"** relationship (재사용+확장)
+    - a senior citizen is a citizen
+    - a Manager is an Employee
+  - “**has-a"** relationship (기능만 받겠다)
+    - a car has an engine, a transmission, gas tank
+    - a Manager has a PayrollID
+
+**상속 관계는 필요할 때만 사용하자 → 인터페이스나 컴포지션을 쓰자**
+
+> 개발 설계 단계에서 부모를 *추상클래스 혹은 인터페이스*로 만들지 둘 중 고민할 때는 인터페이스를 사용하자. 다중 상속이 가능하고 상속 관계의 문제가 없기 때문이다. 만약 이미 부모가 (추상)클래스라면 자식 클래스는 상속 관계보다는 컴포지션을 사용하자.
+>
+> 확실한 is-a 관계이고 **코드의 재사용+확장**이 필요한 경우일 때만 상속을 사용하자. 부모가 변경될 때 자식들도 다 변경이 되어야 하는 상황일 때 사용하자. 아니라면 인터페이스나 컴포지션을 사용하자❕
+
+**Reference**
+
+- [https://www.softwaretestinghelp.com/composition-in-java/](https://www.softwaretestinghelp.com/composition-in-java/)
+- [https://tecoble.techcourse.co.kr/post/2020-05-18-inheritance-vs-composition/](https://tecoble.techcourse.co.kr/post/2020-05-18-inheritance-vs-composition/)
+- [https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse](https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse)
+- 책 <이펙티브 자바> 아이템 18 상속보다는 컴포지션을 사용하라
+- [https://dev.to/romansery/why-you-should-favor-composition-over-inheritance-57m6](https://dev.to/romansery/why-you-should-favor-composition-over-inheritance-57m6)
+
+[위로가기⬆](#상속보다는-컴포지션을-사용하자)
