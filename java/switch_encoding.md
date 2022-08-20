@@ -6,7 +6,6 @@
 3. [Tableswitch](#tableswitch)
 4. [Lookupswitch](#lookupswitch)
 5. [Switch문에서 String](#switch문에서-string)
-6. [참고 링크](#reference)
 
 
 
@@ -181,12 +180,11 @@ void switchFunc(int);
 
 String의 경우, (hashCode 메서드에 의해) int 타입의 hashcode값으로 jump table을 생성된다. 이때 hashcode는 case들간의 간격이 연속적이지 않으므로 (랜덤한 주소값들이므로) `Lookupswitch`방식을 사용한다.
 
-## Reference
+**Reference**
 
-[[Java] switch 문이 if-else 보다 효율적인 이유 (tistory.com)](https://shanepark.tistory.com/395)
+- [[Java] switch 문이 if-else 보다 효율적인 이유 (tistory.com)](https://shanepark.tistory.com/395)
+- [[Java] Compiling Switches : tableswitch 와 lookupswitch (tistory.com)](https://jerry92k.tistory.com/54)
+- [https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-3.html#jvms-3.10](https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-3.html#jvms-3.10)
+- [http://daplus.net/java-스위치가-더-빠른-이유/](http://daplus.net/java-%EC%8A%A4%EC%9C%84%EC%B9%98%EA%B0%80-%EB%8D%94-%EB%B9%A0%EB%A5%B8-%EC%9D%B4%EC%9C%A0/)
 
-[[Java] Compiling Switches : tableswitch 와 lookupswitch (tistory.com)](https://jerry92k.tistory.com/54)
-
-[https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-3.html#jvms-3.10](https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-3.html#jvms-3.10)
-
-[http://daplus.net/java-스위치가-더-빠른-이유/](http://daplus.net/java-%EC%8A%A4%EC%9C%84%EC%B9%98%EA%B0%80-%EB%8D%94-%EB%B9%A0%EB%A5%B8-%EC%9D%B4%EC%9C%A0/)
+[위로가기⬆](#switch문은-if문보다-빠른가-인코딩-방식-비교)
