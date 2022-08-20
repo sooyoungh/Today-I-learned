@@ -25,7 +25,7 @@
 public class Engine {
     protected int engineCapacity;
 
-		public Engine(int engineCapacity) {
+    public Engine(int engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
 
@@ -42,25 +42,23 @@ public class Car extends Engine {
         // 상위 Engine 클래스의 변수/메소드 사용해서 기능 처리
     }
 
-		public long func(Engine engine) {
-        //
-    }
 }
 ```
 
 이 경우 하위 클래스가 상위 클래스에 강하게 결합, 의존하게 된다. 캡슐화를 깨뜨린다(즉, 상위 클래스의 구현이 하위 클래스에 노출된다). 이 구조는 몇 가지 문제가 생길 수 있다.
 
-- 만약 부모클래스에서 수정하면, 자식 클래스도 일일이 모두 수정해주어야 한다. 따라서 변경에 유연하지 못하다.
+- 만약 부모클래스에서 메소드의 필드 타입를 바꾸면, 자식 클래스들도 해당 필드타입을 일일이 모두 수정해주어야 한다. 따라서 변경에 유연하지 못하다.
 - 부모 클래스 메소드 사이의 로직을 모르고 자식 클래스에서 오버라이딩한다면, 자식 클래스의 메소드가 원하지 않게 잘못 동작할 수 있다.
 
 이를 해결하기 위해 컴포지션을 사용하자.
+
 
 ## 컴포지션을 쓰자
 
 <aside>
 
-        🌟 기존 클래스를 private 인스턴스로 만들어서 새로운 클래스에서 참조하는 방식.
-            즉, 기존 클래스가 새로운 클래스의 구성요소로 쓰인다
+	🌟 기존 클래스를 private 인스턴스로 만들어서 새로운 클래스에서 참조하는 방식.
+	즉, 기존 클래스가 새로운 클래스의 구성요소로 쓰인다
 
 </aside>
 
@@ -74,12 +72,17 @@ public class Car {
 
 Engine 인스턴스의 메소드를 호출하는 방식으로 동작한다. 기존 클래스(Engine 클래스)의 코드가 바뀌더라도 새로운 클래스(Car)의 영향이 적다. 클래스 간 의존 관계가 없으니, 상위 클래스의 코드가 바뀌어서 하위 클래스의 코드를 다시 변경해주어야 하는 방식이 아니다. 메소드 호출을 통해 사용하면 된다. 변경에 유연하고 안전하다.
 
+컴포지션은 메소드를 재사용은 할 수 있으나, 오버라이딩(확장)할 수는 없다. 따라서 확장 관련하여 발생하는 문제에서 자유롭다.
+
+The composition also provides code reusability but the difference here is we do not extend the class for this. [참고 링크](https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse)
+
 ## 정리하면
 
 - 상속은 코드 재사용+확장할 수 있으나, 상속관계에서 문제가 발생할 수 있다.
 - 따라서 확실한 is-a 관계일 때만 상속을 사용하자.
 - has-a 관계 즉, 단순 기능을 재사용하고자 한다면(코드 재사용) 컴포지션을 사용하자. 컴포지션은 코드 재사용만 하고 확장할 수 없어 여러 문제에서 자유롭다.
-  The composition also provides code reusability but the difference here is we do not extend the class for this. [참고 링크](https://www.geeksforgeeks.org/difference-between-inheritance-and-composition-in-java/?ref=gcse)
+  
+
 - **is-a 와 has-a 관계 비교**
   - **"is-a"** relationship (재사용+확장)
     - a senior citizen is a citizen
