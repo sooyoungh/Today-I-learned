@@ -4,8 +4,9 @@
 **목차**
 1. [Singleton 패턴이란](#singleton-패턴이란)
 2. [Singleton 패턴 사용하는 이유](#singleton-패턴-사용하는-이유)
-3. [Singleton 패턴의 문제점](#singleton-패턴의-문제점)
-4. [멀티 스레딩 문제 해결방법](#멀티-스레딩-문제-해결방법)
+1. [Singleton 패턴 예시](#singleton-패턴-예시)
+4. [Singleton 패턴의 문제점](#singleton-패턴의-문제점)
+5. [멀티 스레딩 문제 해결방법](#멀티-스레딩-문제-해결방법)
 
 
 ## Singleton 패턴이란
@@ -18,6 +19,10 @@
 
 - 클래스에서 하나뿐인 인스턴스를 관리하고, 인스턴스로 추가로 만들지 못하도록 막아야 한다
 - 어디에서든지 참조할 수 있도록(전역 접근 가능) 해야함
+- 공유 객체이기 때문에 속성을 갖게 되면, 여러 스레드에서 변경하면 문제가 생길 수 있다. 
+  
+=> 속성을 갖지 않게 하거나, 쓰기가 아닌 읽기 전용으로 사용하는 것이 좋다.
+
 
 ## Singleton 패턴 사용하는 이유
 
@@ -31,14 +36,24 @@
 - 또한 데이터 공유가 쉽다. (싱글톤 인스턴스가 전역에서 접근가능하기 때문에) 다만, 동시성 문제가 발생할 수 있다.
 
 
-**예시**
+
+## Singleton 패턴 예시
+
+싱글턴 패턴을 구현하려면 다음 3가지가 필요하다.
+
+1. 싱글톤 인스턴스 (static 참조 변수로 정의되어야 함)
+2. private 접근 제어자가 지정된 생성자 (외부에서 new로 객체 생성할 수 없도록)
+3. 외부에 싱글톤 인스턴스를 반환하는 메소드 (static으로 정의)
+
 
 ```java
 public class Printer {
 
-  private Printer() { }   // Printer 생성자를 외부에서 사용 불가 -> 싱글톤
+  static Printer printer; // 1) 정적 참조 변수
 
-    public static Printer getPrinter(){   // 어디서든 외부에서 접근이 가능하도록!
+  private Printer() { }         // 2) private으로 생성 (Printer 생성자를 외부에서 사용 불가)
+
+    public static Printer getPrinter(){   // 3) 객체 반환 메소드 (어디서든 외부에서 접근이 가능하도록!)
     if (printer == null) {
       printer = new Printer();
     }
