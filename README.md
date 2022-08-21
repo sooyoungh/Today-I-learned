@@ -12,3 +12,4 @@
 - [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
 - [Java에서의 Singleton 패턴](/java/singleton.md)
 - [Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
+- [Checked Exception을 Unchecked Exception으로 throw하자](/java/wrapping_checked_exception_into_unchecked_exception.md)
