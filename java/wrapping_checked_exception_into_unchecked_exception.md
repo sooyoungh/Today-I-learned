@@ -1,8 +1,10 @@
 ## Checked Exception을 Unchecked Exception으로 throw하자
 
-> Checked Exception은 예외 발생 시, 클라이언트 코드에서 해결할 수 있는 상황인 경우에만 사용하자. 
+> Checked Exception은 예외 발생 시, try/catch문으로 복구 전략을 세운다.
 > 
-> 그 외에는 Unchecked Exception을 사용하자.
+> 하지만 명확한 복구 전략이 없을 수도 있고, 개발자에게 문제를 보고 하기 위해서 
+> 
+> Checked Exception을 Unchecked Exception으로 throw하는 게 좋다고 한다❕ 이유를 자세히 알아보자
 > 
 
 `Checked Exception`는 try/catch문으로 개발자가 복구 전략을 마련해둔다. 그러나 이렇게 복구 전략을 마련해놓을 수 있는 경우가 많지 않다. `Checked Exception`이지만 복구할 수 없는 경우(unrecoverable conditions) try/catch문에서 catch문을 비워두기도 한다. 혹은 굳이 비워둔 catch문이 아니더라도, 예외가 잡혀도 개발자에게 보고되지 않고 계속 프로그램이 정상 실행된다는 문제가 있다(Execution of the program continues after the catch block, *as if nothing had happened).* [참고 링크](https://web.archive.org/web/20060113050955/http://onjava.com/pub/a/onjava/2003/11/19/exceptions.html)
@@ -39,8 +41,8 @@ public void dataAccessCode(){
 
 ## 정리하면
 
-> 명확한 복구 전략을 세울수 있다면 Checked Exception을 사용하자. 
-> 하지만 대부분의 경우, 개발자에게 예외 상황을 보고 하는 게 안전하다. Unchecked Exception으로 throw하여 개발자에게 예외 상황을 보고하고 안전하게 문제 해결을 하자.
+> 명확한 복구 전략을 세울수 있다면 Checked Exception을 사용해도 좋다. 
+> 하지만 대부분의 경우, 개발자에게 예외 상황을 보고 하는 게 안전하다. Unchecked Exception으로 throw하여 개발자에게 예외 상황을 보고하고 안전하게 문제를 해결하는 게 좋다.
 
 
 
