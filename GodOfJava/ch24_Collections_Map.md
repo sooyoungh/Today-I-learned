@@ -30,6 +30,8 @@ HashTable을 제외한 Map(을 구현한) 클래스들은 스레드-세이프하
 
 `Map m = Collections.synchronized( new HashMap(..) );`
 
+[HashTable 자세히 알아보기❕🔎](https://github.com/Cs-Java-Interview/Tech-Interview/blob/main/data_structure/hash.md)
+
 ## HashMap
 
 - 키는 기본자료형/참조자료형 모두 될 수 있음
