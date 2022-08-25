@@ -2,7 +2,7 @@
 
 **목차**
 1. [Hash 사용하는 컬렉션 비교하기](#hash-사용하는-컬렉션-비교하기)
-2. [HashTable](#hashTable)
+2. [HashTable](#hashtable)
 
 
 > Hashing을 사용하는 `Hashtable`, `HashMap`, `HashSet`에 대해 정리해보았다.
@@ -16,7 +16,7 @@
 
 이 컬렉션들은 모두 Hash 알고리즘을 사용한다. `Hashtable`과 `HashMap`은 Map 인터페이스를 구현한다. 즉, Key-Value 형식의 자료구조이다. Map 구현체에 Hash 알고리즘은, **Key값을 Hashing하여 인덱스로 사용**한다는 뜻이다.
 
-반면 `HashSet` 은 Set 인터페이스의 구현체이다. 즉 순서/중복없는 자료구조이다. 삽입되는 객체를 Key값으로 하고, 내부 구현 코드에서 필드로 선언한 객체를 Value 값으로 사용한다. 따라서 
+반면 `HashSet` 은 Set 인터페이스의 구현체이다. 즉 순서/중복없는 자료구조이다. 삽입되는 객체를 Key값으로 하고, 내부 구현 코드에서 필드로 선언한 객체를 Value 값으로 사용한다. 자세한 차이점은 다음과 같다. 
 
 - `Hashtable`
     - Map 인터페이스의 구현체
@@ -34,6 +34,7 @@
 > `Hashtable`과 `HashMap`은 Map을 구현하는 거의 비슷한 자료구조들이다. 그러나 `Hashtable`은 동기화를 지원하고, `HashMap`은 동기화를 지원하지 않는다. 따라서 멀티 스레드 환경에서는 `Hashtable`는 멀티 스레드 환경일 때 사용하고, 싱글 스레드 환경일 경우 `HashMap`을 사용해야 성능면에서 유리하다. (`Hashtable`는 성능이 떨어진다.) 또한 `HashMap`은 보조 해시 함수를 사용하여 해시 충돌이 덜하다는 장점이 있다.
 > 
 > `HashSet`vs `HashMap`
+> 
 > `HashSet`은 객체 자체를 Key값으로, Value값은 dummy data으로 두 객체가 저장되기 때문에 `HashSet`이 더 느리다.
 > 
 
