@@ -24,4 +24,4 @@
 - [프로세스와 스레드](/OS/proc_thread.md)
 
 ## 💿 I/O
-- 
+- [Blocking/Non-Blocking, Synchronous/Asynchronous](/IO/blocking_synchronous.md)
