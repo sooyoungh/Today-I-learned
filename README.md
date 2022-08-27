@@ -16,7 +16,7 @@
 **상속 관계** 🙅‍♀️
   - [Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
 
-**자바의 다형성** ⚡
+**자바의 다형성** 🍇
   - [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
   - [자바의 변성 알아보기 - Generic과 함께](/java/변성.md)
 
@@ -29,14 +29,15 @@
   - [Java Collections - List](/java/collections_list.md)
   - [Java Collections - Hash](/java/collections_hash.md)
   - [Java Collections - 주의 사항❕](/java/collections_warning.md)
-- [자바의 직렬화(Serialize)](/java/직렬화.md)
-- [Java에서의 Singleton 패턴](/java/singleton.md)
-
 
 **Java와 I/O** 💿
   1. [Blocking/Non-Blocking, Sync/Async](/IO/blocking_synchronous.md)
   2. [Java I/O 알아보기](/IO/java_io.md)
   3. [I/O 대신 NIO?](/IO/nio.md)
+
+
+- [자바의 직렬화(Serialize)](/java/직렬화.md)
+- [Java에서의 Singleton 패턴](/java/singleton.md)
 
 
 ## 💻 OS
