@@ -15,6 +15,7 @@
 - 예외 처리 주의 ❗
   - [Checked Exception을 Unchecked Exception으로 throw하자](/java/wrapping_checked_exception_into_unchecked_exception.md)
   - [try/catch/finally와 return문](/java/try-catch-finally와_return문.md)
+  - [Try with resource로 자동 자원 해제하기](/java/try_with_resource.md)
 - Java Collections 자세히 🔎
   - [Java Collections - List](/java/collections_list.md)
   - [Java Collections - Hash](/java/collections_hash.md)
