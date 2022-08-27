@@ -33,9 +33,33 @@ NIO는 Selector/Channel/Buffer를 사용하여 I/O의 단점을 개선하였다.
 
 NIO는 채널/버퍼로 I/O 스트림의 단점을 극복하였다.
 
-- `Channel`로 양방향 IO 통신을 할 수 있다. 즉, 따로 입력/출력 스트림을 만들어주는 IO와 다르게 하나의 채널로 입출력이 가능하다.
-- `Buffer`에 입출력 데이터를 임시 저장한다. `Channel`은 읽은 데이터를 무조건 내부의 `Buffer`에 저장한다. 스트림과 다르게 `Buffer`에서 필요한 부분만 읽고 사용할 수 있다.
-- `Direct Buffer`를 사용할 경우 더 빠르다. I/O의 스트림에도 버퍼가 있다. 하지만 스트림의 버퍼는 JVM 버퍼이다. 커널 버퍼에 직접 접근하지 않고 JVM의 버퍼를 거치므로 속도가 느렸다. 하지만 NIO의 `Direct Buffer`는 커널 버퍼에 직접 접근이 가능하기 때문에 더 빠르다.
+- `Channel`로 양방향 IO 통신을 할 수 있다. 
+    
+    즉, 따로 입력/출력 스트림을 만들어주는 IO와 다르게 하나의 채널로 입출력이 가능하다.
+- `Buffer`에 입출력 데이터를 임시 저장한다. 
+    
+    `Channel`은 읽은 데이터를 무조건 내부의 `Buffer`에 저장한다. 스트림과 다르게 `Buffer`에서 필요한 부분만 읽고 사용할 수 있다.
+- `Direct Buffer`를 사용할 경우 더 빠르다. 
+    
+    I/O의 스트림에도 버퍼가 있다. 하지만 스트림의 버퍼는 JVM 버퍼이다. 커널 버퍼에 직접 접근하지 않고 JVM의 버퍼를 거치므로 속도가 느렸다. 하지만 NIO의 `Direct Buffer`는 커널 버퍼에 직접 접근이 가능하기 때문에 더 빠르다.
+
+
+> **Direct Buffer VS Non-Direct Buffer**
+> 
+> I/O에서도 버퍼를 사용할 수 있는데, 동작 과정은 다음과 같다. [이미지 출처](https://howtodoinjava.com/java/io/how-java-io-works-internally/)
+> 
+> ![image](https://user-images.githubusercontent.com/77563814/187010534-747a1ab2-49f1-4119-87dd-798fb1a50a1e.png)
+> 
+> 1. disk controller가 **disk로부터 데이터를 fetch해온다.**
+> 2. disk controller는 읽어온 데이터를 kernel memory buffer에 write한다. (DMA=CPU 없이 메인메모리 접근)
+> 3. (버퍼가 용량이 차고, read 요청이 오면) kernel은 buffer 데이터를 process의 buffer로 복사한다.
+> 
+> 즉, I/O의 버퍼 동작과정은 커널 메모리를 직접 접근하지 않고 JVM 버퍼에 복사하는 과정이 필요하다. 이 때문에 속도가 느려진다. NIO에서는 이를 개선하여 커널 메모리 버퍼를 사용한> 다. JVM 버퍼를 거치지 않고, 직접 DMA한다. 이를 **Direct Buffer**라 한다.
+> 
+> Direct Buffer는 C 함수를 호출해야하는 등 버퍼 생성 시간은 오래 걸리지만, 입출력이 빠르고 버퍼의 크기가 크다. 따라서 한번 버퍼 생성 후 재사용하기 적합하다. Non-Direct > > > > Buffer는 JVM의 메모리를 사용하므로 버퍼의 크기가 크지 않고 버퍼 생성이 빠르다. 그러나 입출력 속도가 느리다. 
+> 
+> 대용량의 데이터를 주고 받을 경우, Direct Buffer는 그 만큼의 버퍼를 생성해주어야 한다. 이때 시간이 더 오래걸릴 수 있어 I/O가 유리하다.
+> 
 
 ## 2. NIO는 비동기, **Non-blocking이 가능하다.**
 
