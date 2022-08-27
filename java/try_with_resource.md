@@ -11,7 +11,7 @@
 ## Try-with-resources
 
 - **try에 자원 객체를 전달하면, try 코드 블록이 끝나면 자동으로 자원을 종료해주는 기능**
-- 즉, 따로 finally 블록이나 모든 catch 블록에 종료 처리를 하지 않아도 된다.
+- 즉, 개발자가 직접 finally 자원 해제시켜주지 않아도 된다.
 
 Java는 `try`문이 종료될 때 `try`문 안에서 선언된 객체의 `close()` 메소드를 호출한다. 개발자가 따로 finally에서 해제시켜줄 필요가 없다.
 
@@ -26,7 +26,7 @@ try {
 } catch (FileNotFoundException e) {
     e.printStackTrace();
 } finally {
-    if (scanner != null) {  // 해제되었는지도 체크해보아야 함! 
+    if (scanner != null) {  // 이미 해제되었는지도 체크해보아야 함! 
         scanner.close();
     }
 }
@@ -45,8 +45,8 @@ try (Scanner scanner = new Scanner(new File("test.txt"))) { // try문 이후에 
 ## AutoCloseable
 
 > Q : 그럼 `try`문에 선언된 모든 객체들이 자동으로 해제될까?
-
-A : `java.lang.AutoCloseable`을 구현한 객체만 해당된다.
+> 
+> A : `java.lang.AutoCloseable`을 구현한 객체만 해당된다.
 > 
 
 `AutoCloseable`은 JDK1.7부터 추가된 인터페이스다. 
@@ -62,7 +62,7 @@ public interface AutoCloseable {
 개발자가 직접 `AutoCloseable`을 구현하는 클래스를 생성하여 사용할 수도 있다.
 
 ```java
-// 
+// AutoCloseable을 구현한 클래스
 public class MyResource implements AutoCloseable {
     @Override
     public void close() throws Exception {
@@ -72,7 +72,7 @@ public class MyResource implements AutoCloseable {
 
 // try-with-resources
 private void orderOfClosingResources() throws Exception {
-    try (AutoCloseableResourcesFirst af = new AutoCloseableResourcesFirst();
+    try (AutoCloseableResourcesFirst af = new AutoCloseableResourcesFirst();    // 알아서 해제
         AutoCloseableResourcesSecond as = new AutoCloseableResourcesSecond()) {
 
         af.doSomething();
