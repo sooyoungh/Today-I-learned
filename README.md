@@ -19,7 +19,7 @@
   - [Java Collections - List](/java/collections_list.md)
   - [Java Collections - Hash](/java/collections_hash.md)
   - [Java Collections - 주의 사항❕](/java/collections_warning.md)
-
+- [자바의 직렬화(Serialize)](/java/직렬화.md)
 
 
 
