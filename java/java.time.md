@@ -2,7 +2,7 @@
 
 **목차**
 1. [java.time 패키지](#javatime-패키지)
-2. [LocalDateTime, OffsetDateTime, ZonedDateTime](#localDateTime-offsetdatetime-zoneddatetime)
+2. [LocalDateTime, OffsetDateTime, ZonedDateTime](#localdatetime-offsetdatetime-zoneddatetime)
 3. [LocalDateTime](#localdatetime)
 4. [OffsetDateTime](#offsetdatetime)
 5. [Instant](#instant)
@@ -22,7 +22,7 @@ Date와 Calendar 클래스들의 단점을 개선하여 java.time 패키지가 �
     1. Timezone을 고려하지 않을 경우 (LocalDateTime)
         - 어떤 지역/국가이던 상관없이 표시되는 시간이 같다.
         - ex) 생년월일
-    2. Timezone을 고려하지 않을 경우 (OffsetDateTime, ZonedDateTime)
+    2. Timezone을 고려하는 경우 (OffsetDateTime, ZonedDateTime)
         - Timezone을 고려하여 표시되는 시간이 달라진다.
         - ex) 온라인 라이브 콘서트, 회의 시간
 
@@ -95,13 +95,9 @@ LocalDate date = LocalDate.parse("1992-12-04");
 
 </aside>
 
-타임존(시간대)에 대한 정보를 가지고 있다.
+- 타임존(시간대)에 대한 정보를 가지고 있다.
+- ex) `OffsetDateTime off = OffsetDateTime.now(); // 2016-6-13T10:20:30.000000+09:00`
 
-
-
-```java
-OffsetDateTime off = OffsetDateTime.now(); // 2016-6-13T10:20:30.000000+09:00
-```
 
 ## ZonedDateTime
 
@@ -111,14 +107,9 @@ OffsetDateTime off = OffsetDateTime.now(); // 2016-6-13T10:20:30.000000+09:00
 
 </aside>
 
-타임존뿐만 아니라, 지역정보도 가지도 있다.
-
-즉, `+09:00`와 어떤 지역인지 문자열(`Asia/Seoul`)로 정보를 가진다.
-
-
-```java
-ZonedDateTime zone = ZonedDateTime.now(); // 2016-6-13T10:20:30.000000+09:00[Asia/Seoul]
-```
+- 타임존뿐만 아니라, 지역정보도 가지도 있다.
+- 즉, `+09:00`와 어떤 지역인지 문자열(`Asia/Seoul`)로 정보를 가진다.
+- ex) `ZonedDateTime zone = ZonedDateTime.now(); // 2016-6-13T10:20:30.000000+09:00[Asia/Seoul]`
 
 
 ## Instant
