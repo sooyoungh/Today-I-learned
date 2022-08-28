@@ -36,7 +36,7 @@
   3. [I/O 대신 NIO?](/IO/nio.md)
 
 **Java와 시간** 🕜
-  - [date, calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
+  - [Date, Calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
   - [java.time 패키지 살펴보기](/java/java.time.md)
 
 
