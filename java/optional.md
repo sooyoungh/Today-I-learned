@@ -22,9 +22,7 @@ null 객체를 참조하여 메소드 호출 시, `NPE(NullPoiterException)`가 
 
 </aside>
 
-물론 NPE를 무조건 피해야 하는 건 아니다. NPE가 발생하여 개발자에게 보고하는 게 좋은 상황도 있다. 
-=> it's much better to use `[NPE가 발생하는 상황]` as you will see a NullPointerException which will indicate that your program has a bug 
-=> [관련 설명 참고(댓글 중에...)](https://stackoverflow.com/questions/31696485/why-use-optional-of-over-optional-ofnullable)
+물론 NPE를 무조건 피해야 하는 건 아니다. NPE가 발생하여 개발자에게 보고하는 게 좋은 상황도 있다. [체크예외를 언체크 예외로 던져주는 게 좋은 이유랑 같다.](https://github.com/sooyoungh/Today-I-learned/blob/main/java/wrapping_checked_exception_into_unchecked_exception.md) [관련 설명 참고 (댓글 중에...) ](https://stackoverflow.com/questions/31696485/why-use-optional-of-over-optional-ofnullable), it's much better to use `[NPE가 발생하는 상황]` as you will see a NullPointerException which will indicate that your program has a bug 
 
 아래처럼 객체가 null일 가능성이 있는 경우, `Optional`을 사용하여 간단하고 안전하게 null 처리를 할 수 있다.
 
