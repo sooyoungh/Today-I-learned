@@ -17,15 +17,15 @@
   2. [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
   3. Generic - 자세히 알아보기
   4. [Generic - 자바의 변성](/java/변성.md)
-  5. 상속🙅‍♀️ 추상클래스 vs 인터페이스
-  6. [상속🙅‍♀️ Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
+  5. 상속 조심🙅‍ 1 - 추상클래스 vs 인터페이스
+  6. [상속 조심🙅‍ 2 - Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
 
 **예외 처리 주의** ❗
   - [Checked Exception을 Unchecked Exception으로 throw하자](/java/wrapping_checked_exception_into_unchecked_exception.md)
   - [try/catch/finally와 return문](/java/try-catch-finally와_return문.md)
   - [Try with resource로 자동 자원 해제하기](/java/try_with_resource.md)
   - Null 파헤치기
-  - [Optional 잘 쓰는 법2 -  - 언제 쓸까?](/java/optional.md)
+  - [Optional 잘 쓰는 법1 -  - 언제 쓸까?](/java/optional.md)
   - Optional 잘 쓰는 법2 - orElse/orElseGet
 
 **Java Collections 자세히** 🔎
