@@ -34,8 +34,11 @@ p.doSomeThing(); // NPE 발생
 // NPE 방지 위해 객체가 null인지 사전 검사해야 한다.
 if (person != null) {
 	Company compay = person.getCompany();
-	if ()
-	return person.doSomeThing();
+	if (compay != null) {
+		return person.doSomeThing();	// 이런 식으로 계속 if문 검사를 해주면 가독성이 떨어지고 복잡하다.
+	} else {
+		// ...
+	}
 } else {
 	// ...
 }
