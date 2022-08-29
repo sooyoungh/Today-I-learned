@@ -25,7 +25,7 @@
   - [try/catch/finally와 return문](/java/try-catch-finally와_return문.md)
   - [Try with resource로 자동 자원 해제하기](/java/try_with_resource.md)
   - Null 파헤치기
-  - [Optional 잘 쓰는 법1 -  - 언제 쓸까?](/java/optional.md)
+  - [Optional 잘 쓰는 법1 - 언제 쓸까?](/java/optional.md)
   - Optional 잘 쓰는 법2 - orElse/orElseGet
 
 **Java Collections 자세히** 🔎
