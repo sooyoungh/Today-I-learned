@@ -17,8 +17,10 @@
   - [Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
 
 **자바의 다형성** 🍇
-  - [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
-  - [자바의 변성 알아보기 - Generic과 함께](/java/변성.md)
+  1. [자바의 다형성 간단 정리](/java/다형성.md)
+  2. [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
+  3. [Generic 알아보기]
+  4. [자바의 변성 알아보기 - Generic과 함께](/java/변성.md)
 
 **예외 처리 주의** ❗
   - [Checked Exception을 Unchecked Exception으로 throw하자](/java/wrapping_checked_exception_into_unchecked_exception.md)
