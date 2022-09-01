@@ -1,9 +1,7 @@
-# Java Collections - 주의 사항❕
+# Thread-Safe 클래스는 필요할 경우에만 쓰자
 
 **목차**
-1. [Thread-Safe 클래스는 필요할 경우에만 쓰자](#thread-safe-클래스는-필요할-경우에만-쓰자)
-2. [equals() 오버라이딩 시, hashCode()도 오버라이딩해주어야 한다](#equals-오버라이딩-시-hashCode도-오버라이딩해주어야-한다)
-
+- [Thread-Safe 클래스는 필요할 경우에만 쓰자](#thread-safe-클래스는-필요할-경우에만-쓰자)
 
 ![image](https://user-images.githubusercontent.com/77563814/186737043-96e19b29-fb04-40d1-bad2-8891cbfe079e.png)
 
@@ -29,6 +27,3 @@ Thread-Safe하다는 의미는 동기화(Synchronization)처리를 했다는 뜻
 | 해시 자료구조 | Hashtable | HashMap |
 | 문자열 | String | StringBuffer / StringBuilder |
 
-## equals() 오버라이딩 시, hashCode()도 오버라이딩해주어야 한다
-
-이는 hashCode()를 사용하는 자료구조에만 해당된다! ex) **`HashSet`,** `Hashtable`, `HashMap`
