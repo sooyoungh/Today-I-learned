@@ -31,7 +31,7 @@
 **Java Collections 자세히** 🔎
   - [Java Collections - List](/java/collections_list.md)
   - [Java Collections - Hash](/java/collections_hash.md)
-  - [Java Collections - 주의 사항❕](/java/collections_warning.md)
+  - [Thread-Safe 클래스는 필요할 경우에만 쓰자](/java/collections_warning.md)
 
 **Java와 I/O** 💿
   1. [Blocking/Non-Blocking, Sync/Async](/IO/blocking_synchronous.md)
@@ -47,6 +47,7 @@
 
 그 외
   - [Java에서의 Singleton 패턴](/java/singleton.md)
+  - [equals()과 hashcode()는 함께 오버라이딩해주자](/java/equals.md)
 
 
 ## 💻 OS
