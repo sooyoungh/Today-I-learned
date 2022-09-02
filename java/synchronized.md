@@ -7,7 +7,7 @@
 3. [정리하면](#정리하면)
 
 
-> 자바의 동기화 방식 중 *`synchronized`* 에 대해 정리해보았다. *`synchronized`* 를 사용하면, 공유자원에 동시에 한 스레드만 접근할 수 있도록 할 수 있다. 이는 메소드 전체와 블록 단위로 적용할 수 있는데, 이를 알아보았다.
+> 자바의 동기화 방식 중 *`synchronized`* 에 대해 정리해보았다. *`synchronized`* 를 사용하면, 공유자원에 동시에 한 스레드만 접근할 수 있도록 할 수 있다. `synchronized`는 메소드 전체와 블록 단위로 적용할 수 있는데, 각각의 경우를 알아보았다.
 > 
 
 ## 1. synchronized method
@@ -29,11 +29,11 @@ public synchronized void func( ) {
 
 ```java
 public synchronized void func1( ) {
-  // 메소드 전체가 동기화
+  // 메소드 전체가 같이 동기화
 }
 
 public synchronized void func2( ) {
-  // 메소드 전체가 동기화
+  // 메소드 전체가 같이 동기화
 }
 
 public void func3( ) {
@@ -70,16 +70,16 @@ public class MsLunch {
     private Object lock2 = new Object();
 
     public void inc1() {
-				// 동기화 안해도 되는 부분
-				// ...
+	// 동기화 안해도 되는 부분
+	// ...
         synchronized(lock1) { // 동기화해줄 부분
             c1++;
         }
     }
 
     public void inc2() {
-				// 동기화 안해도 되는 부분
-				// ...
+	// 동기화 안해도 되는 부분
+	// ...
         synchronized(lock2) { // 동기화해줄 부분
             c2++;
         }
