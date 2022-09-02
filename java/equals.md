@@ -5,7 +5,7 @@
 2. [equals()를 오버라이딩하여 동등성 비교할 수 있다](#equals를-오버라이딩하여-동등성-비교할-수-있다)
 3. [equals()를 오버라이딩하면, hashcode()도 오버라이딩해주어야 한다!](#equals를-오버라이딩하면-hashcode도-오버라이딩해주어야-한다)
 
-> 두 객체를 비교할 때, 완전히 같은 객체인지 혹은 두 객체의 내용이 같은 지 두가지 방법으로 비교할 수 있다. 이와 관련한 동일성과 동등성의 개념과 `equals()`를 오버라이딩하는 방법 및 주의 사항을 정리해보았다.
+> 두 객체를 비교할 때, 두가지 방법으로 비교할 수 있다. 완전히 같은 객체인지 혹은 두 객체의 내용이 같은 지 비교할 수 있다. 이와 관련한 동일성과 동등성의 개념과 `equals()`를 오버라이딩하는 방법 및 주의 사항을 정리해보았다.
 > 
 
 ## 동일성과 동등성
@@ -25,16 +25,42 @@
 `equals()`는 기본적으로는 주소값을 비교한다. 즉, 동일성을 비교한다. 그러나 필요시 두 객체의 내용이 같은 지 비교하려면 `equals()`을 오버라이딩하여 비교한다.
 
 - 기본 `equals()` 내부 : 동일성 비교
+
+```java
+public boolean equals(Object obj) {
+	return (this == obj);
+}
+```
     
-    ```java
-    public boolean equals(Object obj) {
-    	return (this == obj);
-    }
-    ```
-    
-- 아래처럼 오버라이딩하면 내용이 같은지 동등성(equality) 비교하는데 사용할 수 있다.
-- 형변환하기전 `instanceof` 를 활용하면 좋다.
-    
+- 아래처럼 오버라이딩하면 내용이 같은지 동등성(equality) 비교하는데 사용할 수 있다. 형변환할 때 `instanceof` 를 활용하면 좋다.
+
+```java
+// 1. 기본
+@Override
+public boolean equals(Object obj) {
+	return this.속성 == ((클래스명)obj).속성;
+}
+
+// 2. 형변환
+@Override
+public boolean equals(Object obj) {
+
+	boolean result = false;
+        
+	// Animal 클래스의 equals() 메소드일 경우, 자식Dog/Cat 구분하기 위해
+	// instanceof 사용함
+	if (obj instanceof Dog) {
+		if (((Dog)obj).dogNum == dogNum ) {
+			result = true;
+		}
+	} elif (obj instanceof Cat) {
+		if (((Cat)obj).catNum == catNum ) {
+			result = true;
+		}
+	}
+	return result;
+}
+```
 
 ## equals()를 오버라이딩하면, hashcode()도 오버라이딩해주어야 한다!
 
