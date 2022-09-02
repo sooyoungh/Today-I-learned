@@ -40,6 +40,9 @@
   4. NIO2의 파일
   5. [자바의 직렬화(Serialize)](/java/직렬화.md)
 
+**Java와 동기화** 💭
+  - [자바의 동기화 - synchronized](/java/synchronized.md)
+
 **Java와 시간** 🕜
   - [Date, Calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
   - [java.time 패키지 살펴보기](/java/java.time.md)
