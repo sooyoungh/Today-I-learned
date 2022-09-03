@@ -41,7 +41,8 @@
   5. [자바의 직렬화(Serialize)](/java/직렬화.md)
 
 **Java와 동기화** 💭
-  - [자바의 동기화 - synchronized](/java/synchronized.md)
+  1. [자바의 동기화 1 - volatile](/java/volatile.md)
+  2. [자바의 동기화 2 - synchronized](/java/synchronized.md)
 
 **Java와 시간** 🕜
   - [Date, Calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
