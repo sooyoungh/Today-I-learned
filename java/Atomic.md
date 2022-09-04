@@ -1,7 +1,7 @@
-# 자바의 동기화 3 - Non-Blocking과 Atomic(CAS)
+# 자바의 동기화 3 - Lock-Free와 Atomic(CAS)
 
 **목차**
-1. [Non-Blocking 알고리즘](#nonblocking-알고리즘)
+1. [Non-Blocking 알고리즘](#non-blocking-알고리즘)
 2. [Lock-Free 알고리즘](#lock-free-알고리즘)
 3. [CAS 알고리즘이란](#cas-알고리즘이란)
 4. [Atomic 클래스](#atomic-클래스)
@@ -103,4 +103,4 @@ Lock-Free이 구체적으로 어떤 알고리즘일까?
 - [https://parkcheolu.tistory.com/33](https://parkcheolu.tistory.com/33)
 
 
-[위로가기⬆](#자바의-동기화-3--nonblocking과-atomic(cas))
+[위로가기⬆](#자바의-동기화-3---lock-free와-atomiccas)
