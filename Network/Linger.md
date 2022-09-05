@@ -1,7 +1,7 @@
 # 4. TCP LINGER 옵션
 
 **목차**
-1. [TIME_WAIT](#time_wait)
+1. [TCP LINGER 옵션 사용하는 이유? - TIME_WAIT](#tcp-linger-옵션-사용하는-이유?---time_wait)
     - [TIME_WAIT이 클라이언트말고 서버측에 남는 다면](#time_wait이-클라이언트말고-서버측에-남는-다면)
 2. [TCP LINGER 옵션](#tcp-linger-옵션)
 3. [정리하면](#정리하면)
@@ -10,7 +10,10 @@
 > 이전에 TCP의 연결 해제 요청 과정인 TCP 4-way Handshake에 대해 알아보았다. 그중에 `TIME_WAIT`은 클라이언트가 서버측 잉여 패킷을 기다리기 위한 상태이다. 만약 서버측에서  `TIME_WAIT`이 발생하면 문제가 생길 수 있다. 이에 대해 알아보고, 이를 해결하기 위한 TCP LINGER 옵션에 대해 정리해보았다.
 > 
 
-`TIME_WAIT` 기간 동안 왜 기다리는 지 다시 정리해보았다.
+
+## TCP LINGER 옵션 사용하는 이유? - TIME_WAIT
+
+우선 `TIME_WAIT` 기간 동안 왜 기다리는 지 다시 정리해보았다.
 
 ![image](https://user-images.githubusercontent.com/77563814/188499613-aace553f-096f-4d61-9f0a-5de53f3a8a0d.png)
 
@@ -44,7 +47,7 @@
   
     🌟 소켓을 close 했을 때 전송되지 않은 데이터를 어떻게 처리할 지 정하는 옵션
 
-아직 전송하지 못한 데이터가 있다면 버릴지/보낼지, 보낸다면 얼마동안 기다릴지(TIME_WAIT) 정하는 옵션.
+        아직 전송하지 못한 데이터가 있다면 버릴지/보낼지, 보낸다면 얼마동안 기다릴지(TIME_WAIT) 정하는 옵션.
 
 </aside>
 
