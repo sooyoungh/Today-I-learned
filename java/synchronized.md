@@ -17,7 +17,7 @@
 해당 메소드를 호출한 인스턴스 단위로 동기화해줄 수 있다. 해당 인스턴스의 한 스레드만 접근 가능하다. 여러 인스턴스라면, 각각 한 스레드만 접근할 수 있다.
 
 - 코드 영역 : 메소드 전체를 동기화한다.
-- 대상 : 해당 메소드를 호출한 인스턴스 자체를 동기화한다. 즉, 해당 인스턴스의 한 스레드만 접근 가능하다.
+- 대상 : 해당 메소드를 호출한 인스턴스 자체(해당 인스턴스의 멤버필드/메소드)를 동기화한다. 인스턴스당 한 스레드만 접근 가능하다.
 
 `synchronized`메소드(임계 영역)에 접근하면 lock이 걸리고, 이 코드를 실행 후 메소드가 종료되면 unlock된다. 그 후에 다른 스레드가 접근할 수 있다.
 
@@ -68,7 +68,7 @@ public static synchronized void func() {
     - 해당 클래스의 클래스 객체(`TargetClass.class`) ⇒ static synchronized와 같음
     - 해당 인스턴스 전체(`this`)  ⇒ synchronized method와 같음
 
-만약  `Object` 객체를 선언하면, 해당 블록의 멤버 필드들만 동기화할 수 있다. 변수 `c1`과 `c2`는 동기화 처리가 필요하지만, 로직이 겹치지 않는다. 따라서 `c1`이 동기화될 때 `c2`는 lock될 필요없고, 반대도 마찬가지이다.  ⇒ [예시 참고](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html)
+만약  `Object` 객체를 선언하면, 해당 블록의 멤버 필드들만 동기화할 수 있다. 아래 예시에서는 변수 `c1`과 `c2`는 각각 동기화 처리가 필요하지만, 로직이 서로 겹치지 않는다. 즉, `c1`이 lock될 때 `c2`는 lock될 필요없고, 반대도 마찬가지이다.  ⇒ [예시 참고](https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html)
 
 ```java
 // synchronized block - Object
@@ -79,16 +79,16 @@ public class MsLunch {
     private Object lock2 = new Object();
 
     public void inc1() {
-				// 동기화 안해도 되는 부분
-				// ...
+	// 동기화 안해도 되는 부분
+	// ...
         synchronized(lock1) { // 동기화해줄 부분
             c1++;
         }
     }
 
     public void inc2() {
-				// 동기화 안해도 되는 부분
-				// ...
+	// 동기화 안해도 되는 부분
+	// ...
         synchronized(lock2) { // 동기화해줄 부분
             c2++;
         }
