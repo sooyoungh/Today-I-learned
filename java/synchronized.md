@@ -17,7 +17,7 @@
 해당 메소드를 호출한 인스턴스 단위로 동기화해줄 수 있다. 해당 인스턴스의 한 스레드만 접근 가능하다. 여러 인스턴스라면, 각각 한 스레드만 접근할 수 있다.
 
 - 코드 영역 : 메소드 전체를 동기화한다.
-- 대상 : 해당 메소드를 호출한 인스턴스 자체(해당 인스턴스의 멤버필드/메소드)를 동기화한다. 인스턴스당 한 스레드만 접근 가능하다.
+- 대상 : 해당 메소드를 호출한 인스턴스 자체가 동기화된다. 인스턴스당 한 스레드만 접근 가능하다.
 
 `synchronized`메소드(임계 영역)에 접근하면 lock이 걸리고, 이 코드를 실행 후 메소드가 종료되면 unlock된다. 그 후에 다른 스레드가 접근할 수 있다.
 
@@ -49,7 +49,7 @@ public void func3( ) {
 
 `synchronized method`는 이 메소드를 실행한 인스턴스에 대해서 동기화 처리를 한다. (instance-level lock) 따라서, 여러 인스턴스들이 각각 1개씩 메소드를 실행할 수 있다.
 
-`static synchronized method`는 해당 클래스에 동기화 처리를 한다. 여러 인스턴스가 동시에 해당 메소드를 실행할 수 없다. 클래스 전체에서 오직 하나의 스레드만이 동작할 수 있다.
+`static synchronized method`는 해당 클래스 단위로 동기화 처리를 한다. 여러 인스턴스가 동시에 해당 메소드를 실행할 수 없다. 클래스 전체에서 오직 하나의 스레드만이 동작할 수 있다.
 
 ```java
 // static synchronized method
@@ -79,17 +79,13 @@ public class MsLunch {
     private Object lock2 = new Object();
 
     public void inc1() {
-	// 동기화 안해도 되는 부분
-	// ...
-        synchronized(lock1) { // 동기화해줄 부분
+        synchronized(lock1) { 
             c1++;
         }
     }
 
     public void inc2() {
-	// 동기화 안해도 되는 부분
-	// ...
-        synchronized(lock2) { // 동기화해줄 부분
+        synchronized(lock2) { 
             c2++;
         }
     }
