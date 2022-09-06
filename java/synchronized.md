@@ -154,7 +154,7 @@ public static void func( ) {
     - `static synchronized block` :  // 위와 동일
 
 **Reference**
-
+- https://jamssoft.tistory.com/199
 - [https://tourspace.tistory.com/54](https://tourspace.tistory.com/54)
 - [https://jeong-pro.tistory.com/227?category=773575](https://jeong-pro.tistory.com/227?category=773575)
 
