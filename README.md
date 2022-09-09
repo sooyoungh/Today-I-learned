@@ -1,9 +1,5 @@
 # Today-I-learned
 
-## 📕 Book
-
-- [자바의 신 (GodOfJava) 정리](/GodOfJava/목차.md)
-
 ## 🔎 Java
 
 **자바의 JVM** 🚕
@@ -70,3 +66,8 @@
 ## 💻 OS
 - [프로세스와 스레드](/OS/proc_thread.md)
 - [교착상태 알아보기](/OS/교착상태_알아보기.md)
+
+
+## 📕 Book
+
+- [자바의 신 (GodOfJava) 정리](/GodOfJava/목차.md)
