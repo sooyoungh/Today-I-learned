@@ -50,6 +50,7 @@
 그 외
   - [Java에서의 Singleton 패턴](/java/singleton.md)
   - [equals()과 hashcode()는 함께 오버라이딩해주자](/java/equals.md)
+  - [JSP/서블릿/MVC](/java/web.md)
 
 ## 🌎 Network
   1. TCP와 UDP 알아보기
