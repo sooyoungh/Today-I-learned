@@ -45,7 +45,9 @@
 **Java와 시간** 🕜
   - [Date, Calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
   - [java.time 패키지 살펴보기](/java/java.time.md)
-
+  
+**Java와 객체 지향** 🎲
+  - [객체 지향 SOLID 5원칙](/java/SOLID.md)
 
 그 외
   - [Java에서의 Singleton 패턴](/java/singleton.md)
