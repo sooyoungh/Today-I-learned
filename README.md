@@ -28,6 +28,7 @@
   - [Java Collections - List](/java/collections_list.md)
   - [Java Collections - Hash](/java/collections_hash.md)
   - [Thread-Safe 클래스는 필요할 경우에만 쓰자](/java/collections_warning.md)
+  - [equals()과 hashcode()는 함께 오버라이딩해주자](/java/equals.md)
 
 **Java와 I/O** 💿
   1. [Blocking/Non-Blocking, Sync/Async](/IO/blocking_synchronous.md)
@@ -45,19 +46,18 @@
 **Java와 시간** 🕜
   - [Date, Calendar 쓰지 말자](/java/date_calendar_쓰지말자.md)
   - [java.time 패키지 살펴보기](/java/java.time.md)
-  
+
+**Java와 Web** 🕹
+  - [자바와 웹프로그래밍 - JSP/서블릿/MVC](/java/web.md)
+  - [자바와 DB - JDBC/DB pool](/java/db.md)
+
+## 🔮 객체 지향
+
 **Java와 객체 지향** 🎲
   - [객체 지향 4가지 특징](/java/OOP.md)
   - [객체 지향 SOLID 5원칙](/java/SOLID.md)
 
-그 외
-
-  - [equals()과 hashcode()는 함께 오버라이딩해주자](/java/equals.md)
-  - [자바와 웹프로그래밍 - JSP/서블릿/MVC](/java/web.md)
-  - [자바와 DB - JDBC/DB pool](/java/db.md)
-
-## 🔮 객체지향
-  자바 디자인 패턴
+**Java 디자인 패턴** 🖼
   - [Singleton 패턴](/OOP/singleton.md)
   - [Adapter 패턴](/OOP/adpater.md)
 
