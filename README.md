@@ -51,10 +51,15 @@
   - [객체 지향 SOLID 5원칙](/java/SOLID.md)
 
 그 외
-  - [Java에서의 Singleton 패턴](/java/singleton.md)
+
   - [equals()과 hashcode()는 함께 오버라이딩해주자](/java/equals.md)
   - [자바와 웹프로그래밍 - JSP/서블릿/MVC](/java/web.md)
   - [자바와 DB - JDBC/DB pool](/java/db.md)
+
+## 🔮 객체지향
+  자바 디자인 패턴
+  - [Singleton 패턴](/OOP/singleton.md)
+  - [Adapter 패턴](/OOP/adpater.md)
 
 ## 🌎 Network
   1. TCP와 UDP 알아보기
