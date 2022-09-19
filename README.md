@@ -60,6 +60,7 @@
 **Java 디자인 패턴** 🖼
   - [Singleton 패턴](/OOP/singleton.md)
   - [Adapter 패턴](/OOP/adpater.md)
+  - [Decorator 패턴](/OOP/decorator.md)
 
 ## 🌎 Network
   1. TCP와 UDP 알아보기
