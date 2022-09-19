@@ -4,7 +4,7 @@
 **목차**
 - [어댑터 패턴이란](#어댑터-패턴이란)
 - [사용하는 이유?](#사용하는-이유)
-- [동작 (JDBC 예시)](#동작-jdbc-예시)
+- [동작](#동작-jdbc-예시)
 - [예시](#예시)
 
 > 디자인 패턴은 개발 과정 중 문제 해결/요구사항 처리하는 효과적인 방식을 패턴화한 것이다. 스프링 디자인 패턴은 상속/인터페이스/컴포지션(객체를 속성으로 사용)을 사용한다.
@@ -18,11 +18,12 @@
 
 </aside>
 
-대표적인 예시로 JDBC가 있다. JDBC 인터페이스는 다양한 DBMS를 구현체만 바꾸어 사용하는 공통 인터페이스이다.
+대표적인 예시로 JDBC가 있다. JDBC는 다양한 DBMS를 구현체만 바꾸어 사용하는 공통 인터페이스이다. Oravcle, MySQL은 연관성이 없지만, JDBC 인터페이스를 통해 호환 가능하다. 그리고 일관되게 동작한다. 
+
 
 ### 사용하는 이유?
 
-  1. 호환되지 않는 클래스들끼리 공통 인터페이스를 구현하여, 일관되게 동작하게 한다. 이로 인해 클라이언트 코드가 간단해진다.
+  1. 연관없는 클래스들끼리 공통 인터페이스를 구현하여, 일관되게 동작하게 한다. 또한, 공통 인터페이스를 통해 클래스들끼리 호환할 수 있다. 이로 인해 클라이언트 코드가 간단해진다.
   2. 이미 구현된 라이브러리에 새 기능을 추가하고 싶을 경우, 기존 코드를 변경하지 않고 새로운 인터페이스(기능)를 구현하게 한다.
 
 
@@ -47,7 +48,7 @@
 ![img_1.png](image/img_1.png)
 
 
-1. `Sparrow`은 `Bird`인터페이스를 구현하는 클래스이다. 
+1. `Sparrow`은 `Bird`인터페이스를 구현하는 클래스이다. (`Sparrow` 이 새로운 인터페이스 `ToyDuck`을 구현하고 싶은 상황)
 
 ```java
 interface Bird
@@ -69,7 +70,7 @@ class Sparrow implements Bird
 }
 ```
 
-2. 이때, `Sparrow`이 `ToyDuck`인터페이스를 구현하게 하고 싶다. (`ToyDuck` 의 기능을 갖게 하고 싶기 때문)
+2. `Sparrow`이 `ToyDuck`인터페이스를 구현하게 하고 싶으므로, Adapter 패턴을 사용한다. `ToyDuck`인터페이스를 구현한 `Adapter` 클래스를 생성한다.
 
 ```java
 interface ToyDuck
@@ -78,16 +79,7 @@ interface ToyDuck
     public void squeak();
 }
 
-Sparrow sparrow = new Sparrow();
-
-// sparrow을 birdAdapter로 감싸서
-// ToyDuck의 동작을 수행하게 한다.
-ToyDuck birdAdapter = new BirdAdapter(sparrow);
-```
-
-3. `ToyDuck` 인터페이스를 구현하는 `BirdAdapter`을 만든다. `BirdAdapter`가 감싸는 `Adaptee`는 `ToyDuck` 기능도 수행한다.
-
-```java
+// 어댑터 클래스
 class BirdAdapter implements ToyDuck
 {
     Bird bird;
@@ -103,7 +95,17 @@ class BirdAdapter implements ToyDuck
 }
 ```
 
-4. `BirdAdapter`로 감싸지는 `Adaptee`는 `Target` 인터페이스를 사용할 수 있다. 이러한 방식으로 Adapter 패턴을 사용하면 연관없는 클래스들도 공통 인테페이스(`Target` )를 가지게된다.
+3. `BirdAdapter` 객체에 `Sparrow` 를 주입한다. (어댑터 객체에 기존 객체를 주입한다.) ⇒ `Sparrow` 은 `ToyDuck` 기능도 가진다.
+
+```java
+Sparrow sparrow = new Sparrow();
+
+// sparrow을 birdAdapter로 감싸서(주입해서)
+// ToyDuck의 동작을 수행하게 한다.
+ToyDuck birdAdapter = new BirdAdapter(sparrow);
+```
+
+`Adapter`로 감싸지는 `Adaptee`는 `Target` 인터페이스를 사용할 수 있다. 이러한 방식으로 Adapter 패턴을 사용하면 연관없는 클래스들도 공통 인터페이스(`Target` )를 가지게된다. 또한 코드 변경없이 원하는 인터페이스를 상속받게 한다.
 
 
 **Reference**
