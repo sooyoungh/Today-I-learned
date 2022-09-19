@@ -57,7 +57,7 @@
   - [객체 지향 4가지 특징](/java/OOP.md)
   - [객체 지향 SOLID 5원칙](/java/SOLID.md)
 
-**Java 디자인 패턴** 🖼
+**JavaSpring 디자인 패턴** 🖼
   - [Singleton 패턴](/OOP/singleton.md)
   - [Adapter 패턴](/OOP/adpater.md)
   - [Decorator 패턴](/OOP/decorator.md)
