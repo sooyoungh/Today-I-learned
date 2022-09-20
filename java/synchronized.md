@@ -3,6 +3,7 @@
 
 **목차**
 1. [synchronized method](#1-synchronized-method)
+    - [synchronized method에서 lock의 역할?](#synchronized-method에서-lock의-역할)
 2. [static synchronized method](#2-static-synchronized-method)
 3. [synchronized block](#3-synchronized-block)
 4. [static synchronized block](#4-static-synchronized-block)
@@ -43,7 +44,46 @@ public void func3( ) {
 }
 ```
 
-단, 이 방식은 인스턴스 전체에 lock이 걸린다. 메소드 영역 전체에 lock이 걸리기 때문에 불필요한 영역도 함께 동기화된다. 따라서 자바에서는 필요에 따라 메소드 전체가 아니라 block 단위로 동기화 할 수 도 있다. block 단위 동기화를 알아보기전에, static 동기화에 대해 알아보자
+synchronized method는 기본적으로 해당 클래스의 모든 synchronized method들이 함께 동기화된다. 따라서 한 인스턴스가 어떤 synchronized method에 진입하면, 다른 synchronized method들 모두가 사용하지 못한다. 이때 lock 객체를 사용하면, 해당 synchronized method만 동기화할 수 있다. 이를 예시와 함께 정리해보았다!
+
+## synchronized method에서 lock의 역할?
+
+1. `synchronized` : 따로 lock을 지정 안 해줄 경우
+    
+    해당 클래스의 모든 synchronized 메소드들 전체에 동기화가 걸린다. 따라서 어떤 인스턴스가 synchronized 메소드에 진입하면, 다른 synchronized 메소드들 모두 block된다.
+    
+    ```java
+    class X { 
+    	public synchronized void foo() { 
+    		... 
+    	} 
+    }
+    ```
+    
+
+2. `synchronized(lock)` : 메소드에 lock객체 지정해줄 경우
+    
+    해당 메소드에만 lock이 걸린다. 다른 synchronized 메소드들은 진입가능하다!
+    
+    ```java
+    class X { 
+    
+    	object lock = new Object(); 
+    
+    	public synchronized(lock) void foo() { 
+    		... 
+    	} 
+    }
+    ```
+    
+
+따라서 다음과 같이 사용하면 된다.
+
+1. `synchronized` : 메소드에 따로 lock을 지정 안 해준 상황
+    - 클래스의 모든 synchronized 메소드들을 동시에 동기화하고 싶은 경우
+2. `synchronized(lock)` : 메소드에 lock 객체 지정해준 상황
+    - 해당 메소드만 동기화해주고 싶은 경우
+
 
 ## 2. static synchronized method
 
@@ -140,6 +180,8 @@ public static void func( ) {
 	}
 }
 ```
+
+
 
 ## 정리하면
 
