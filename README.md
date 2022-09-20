@@ -1,8 +1,9 @@
 # Today-I-learned
 
-## 🔎 Java
+## 🎪 Java
 
 **자바의 JVM** 🚕
+  - JVM의 구조
   - JVM의 GC 작동 방식
   - [자바에 Call By Value만 있는 이유 (JVM의 GC)](/java/call_by_value.md)
   - [인코딩 - Switch문은 if문보다 빠른가?](/java/switch_encoding.md)
@@ -57,10 +58,18 @@
   - [객체 지향 4가지 특징](/java/OOP.md)
   - [객체 지향 SOLID 5원칙](/java/SOLID.md)
 
-**JavaSpring 디자인 패턴** 🖼
+**Java Spring 디자인 패턴** 🖼
   - [Singleton 패턴](/OOP/singleton.md)
   - [Adapter 패턴](/OOP/adpater.md)
   - [Decorator 패턴](/OOP/decorator.md)
+
+## 🌺 Spring
+
+  - Spring의 IoC/DI
+  - Web Architecture (MVC, Servlet, Spring MVC, Spring Boot)
+  - Filter / Intercepter / AOP
+
+
 
 ## 🌎 Network
   1. TCP와 UDP 알아보기
