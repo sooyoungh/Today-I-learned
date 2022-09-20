@@ -1,5 +1,11 @@
 # Today-I-learned
 
+<aside>
+
+    🌟 CS, Java, Spring 공부하며 중요하거나 헷갈린 파트들 주제별로 묶어 정리한 글들.
+
+</aside>
+
 ## 🎪 Java
 
 **자바의 JVM** 🚕
@@ -10,12 +16,12 @@
   - [인코딩 - 문자열 인코딩 방식 알아보기](/java/encoding.md)
 
 **자바의 다형성** 🍇
-  1. [자바의 다형성 간단 정리](/java/다형성.md)
-  2. [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
-  3. Generic - 자세히 알아보기
-  4. [Generic - 자바의 변성](/java/변성.md)
-  5. 상속 조심🙅‍ 1 - 추상클래스 vs 인터페이스
-  6. [상속 조심🙅‍ 2 - Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
+  -  [자바의 다형성 간단 정리](/java/다형성.md)
+  -  [List<> = new ArrayList<> 쓰는 이유 (업캐스팅)](/java/upcasting.md)
+  -  Generic - 자세히 알아보기
+  -  [Generic - 자바의 변성](/java/변성.md)
+  -  상속 조심🙅‍ 1 - 추상클래스 vs 인터페이스
+  -  [상속 조심🙅‍ 2 - Prefer composition than inheritance](/java/prefer_composition_than_inheritance.md)
 
 **예외 처리 주의** ❗
   - [Checked Exception을 Unchecked Exception으로 throw하자](/java/wrapping_checked_exception_into_unchecked_exception.md)
