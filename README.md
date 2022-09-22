@@ -1,4 +1,10 @@
-# Today-I-learned
+# 🙂 Hello I ' m sooyoung
+
+[<img src=".gitbook/assets/77563814.png" alt="" data-size="line"> Github 계정](https://github.com/sooyoungh)
+
+
+
+## 📝 Today I learned 목
 
 ```
 🌟 CS, Java, Spring 공부하며 중요하거나 헷갈린 파트들 주제별로 묶어 정리한 글들.
@@ -87,21 +93,21 @@
 
 1. TCP와 UDP 알아보기
 2. TCP의 연결과 해제 (3/4-way-handshake)
-3. [TCP LINGER 옵션](today-i-learned/cs/network/linger.md)
-4. [TCP/IP 소켓 프로그래밍 알아보기](today-i-learned/cs/network/socket\_programming.md)
+3. [TCP LINGER 옵션](network/linger.md)
+4. [TCP/IP 소켓 프로그래밍 알아보기](network/socket\_programming.md)
 5. TCP 다중 클라이언트 통신(스레드)
 
-* [HTTP 알아보기](today-i-learned/cs/network/http.md)
-* [HTTPS와 SSL](today-i-learned/cs/network/ssl.md)
-* [쿠키와 세션](today-i-learned/cs/network/cookie\_session.md)
+* [HTTP 알아보기](network/http.md)
+* [HTTPS와 SSL](network/ssl.md)
+* [쿠키와 세션](network/cookie\_session.md)
 
 ## 💌 Database
 
-* [JDBC - Class.forName() 동작 방식](today-i-learned/cs/database/classforname.md)
+* [JDBC - Class.forName() 동작 방식](database/classforname.md)
 
 ## 💻 OS
 
-* [프로세스와 스레드](today-i-learned/cs/os/proc\_thread.md)
+* [프로세스와 스레드](os/proc\_thread.md)
 * [교착상태 알아보기](broken-reference)
 
 ## 📕 Book

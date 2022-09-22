@@ -96,7 +96,7 @@ PreparedStatement ps = con.prepareStatement(query); // 3. 쿼리문 실행
 
 **Reference**
 
-* [https://github.com/sooyoungh/Today-I-learned/blob/main/java/db.md](../../../java/java-web/db.md)
+* [https://github.com/sooyoungh/Today-I-learned/blob/main/java/db.md](../java/java-web/db.md)
 * [https://github.com/Cs-Java-Interview/Tech-Interview/blob/main/java/reflection.md](https://github.com/Cs-Java-Interview/Tech-Interview/blob/main/java/reflection.md)
 * [https://stackoverflow.com/questions/8053095/what-is-the-actual-use-of-class-fornameoracle-jdbc-driver-oracledriver-while](https://stackoverflow.com/questions/8053095/what-is-the-actual-use-of-class-fornameoracle-jdbc-driver-oracledriver-while)
 * [https://www.baeldung.com/java-jdbc-loading-drivers](https://www.baeldung.com/java-jdbc-loading-drivers)

@@ -1,8 +1,8 @@
 # Table of contents
 
-* [Today-I-learned](README.md)
+* [🙂 Hello I ' m sooyoung](README.md)
 
-## 🥳 Today-I-learned
+## 📝 Today-I-learned
 
 * [🎪 Java](java/README.md)
   * [🚕 자바의 JVM](java/jvm/README.md)
@@ -49,21 +49,22 @@
   * [Adapter 패턴](oop/adpater.md)
   * [Decorator 패턴](oop/decorator.md)
 * [💡 CS](today-i-learned/cs/README.md)
-  * [🚀 Network](today-i-learned/cs/network/README.md)
-    * [전송 계층 3 - TCP LINGER 옵션](today-i-learned/cs/network/linger.md)
-    * [전송 계층 4 - TCP/IP Socket Programming 알아보기](today-i-learned/cs/network/socket\_programming.md)
-    * [어플리케이션 계층 1 - HTTP 알아보기](today-i-learned/cs/network/http.md)
-    * [어플리케이션 계층 2 - HTTPS와 SSL](today-i-learned/cs/network/ssl.md)
-    * [어플리케이션 계층 3 - 쿠키와 세션](today-i-learned/cs/network/cookie\_session.md)
-  * [💌 Database](today-i-learned/cs/database/README.md)
-    * [JDBC - Class.forName() 동작 방식](today-i-learned/cs/database/classforname.md)
-  * [💻 OS](today-i-learned/cs/os/README.md)
-    * [프로세스와 스레드](today-i-learned/cs/os/proc\_thread.md)
+  * [🚀 Network](network/README.md)
+    * [전송 계층 3 - TCP LINGER 옵션](network/linger.md)
+    * [전송 계층 4 - TCP/IP Socket Programming 알아보기](network/socket\_programming.md)
+    * [어플리케이션 계층 1 - HTTP 알아보기](network/http.md)
+    * [어플리케이션 계층 2 - HTTPS와 SSL](network/ssl.md)
+    * [어플리케이션 계층 3 - 쿠키와 세션](network/cookie\_session.md)
+  * [💌 Database](database/README.md)
+    * [JDBC - Class.forName() 동작 방식](database/classforname.md)
+  * [💻 OS](os/README.md)
+    * [프로세스와 스레드](os/proc\_thread.md)
 
 ## 🏙 Projects
 
 * [☕ Cafemate](projects/cafemate.md)
-* [🐯 MUrangE](projects/murange.md)
+* [🐯 MUrangE](projects/murange/README.md)
+  * [Page 2](projects/murange/page-2.md)
 
 ## 📚 Book
 
