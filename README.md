@@ -73,9 +73,9 @@
 
 **Java Spring 디자인 패턴** 🖼
 
-* [Singleton 패턴](oop-2/singleton.md)
+* [Singleton 패턴](oop/singleton.md)
 * [Adapter 패턴](oop/adpater.md)
-* [Decorator 패턴](oop-1/decorator.md)
+* [Decorator 패턴](oop/decorator.md)
 
 ## 🌺 Spring
 
@@ -87,13 +87,13 @@
 
 1. TCP와 UDP 알아보기
 2. TCP의 연결과 해제 (3/4-way-handshake)
-3. [TCP LINGER 옵션](network-1/linger.md)
+3. [TCP LINGER 옵션](network/linger.md)
 4. [TCP/IP 소켓 프로그래밍 알아보기](java/socket\_programming.md)
 5. TCP 다중 클라이언트 통신(스레드)
 
-* [HTTP 알아보기](network/http.md)
-* [HTTPS와 SSL](network-2/ssl.md)
-* [쿠키와 세션](network-3/cookie\_session.md)
+* [HTTP 알아보기](network-1/http.md)
+* [HTTPS와 SSL](network-1/ssl.md)
+* [쿠키와 세션](network-1/cookie\_session.md)
 
 ## 💌 Database
 
@@ -102,8 +102,8 @@
 ## 💻 OS
 
 * [프로세스와 스레드](os/proc\_thread.md)
-* [교착상태 알아보기](os-1/\_.md)
+* [교착상태 알아보기](os/\_.md)
 
 ## 📕 Book
 
-* [자바의 신 (GodOfJava) 정리](godofjava/undefined.md)
+* [자바의 신 (GodOfJava) 정리](godofjava-13/undefined.md)
