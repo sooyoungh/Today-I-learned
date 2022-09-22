@@ -31,7 +31,7 @@
 
 기존 클래스(Adaptee)가 새로운 인터페이스(Target)를 구현하고 싶은 상황
 
-![img.png](image/img.png)
+![image](https://user-images.githubusercontent.com/77563814/191674720-fee12919-2ab0-49ea-9073-878491034653.png)
 
 
   1. 클라이언트는 Target 인터페이스(`JDBC`)에 의존한다.
