@@ -106,4 +106,4 @@
 
 ## 📕 Book
 
-* [자바의 신 (GodOfJava) 정리](godofjava-13/undefined.md)
+* [자바의 신 (GodOfJava) 정리](godofjava/undefined.md)
