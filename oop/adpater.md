@@ -39,7 +39,7 @@
 
 [예시 참고](https://www.geeksforgeeks.org/adapter-pattern/?ref=gcse) : Bird를 구현한 Sparrow는 새롭게 ToyDuck의 기능을 구현하고 싶은 상황.
 
-![img\_1.png](../../OOP/image/img\_1.png)
+![img\_1.png](../OOP/image/img\_1.png)
 
 1. `Sparrow`은 `Bird`인터페이스를 구현하는 클래스이다. (`Sparrow` 이 새로운 인터페이스 `ToyDuck`을 구현하고 싶은 상황)
 
