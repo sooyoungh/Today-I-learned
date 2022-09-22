@@ -59,7 +59,7 @@
 * [📕 GodOfJava](godofjava-12/README.md)
   * [GodOfJava(자바의 신) 목차](godofjava-13/undefined.md)
   * [ch08 : 참조 자료형](godofjava/ch08\_.md)
-  * [ch09 : 패키지와 접근 제어자](godofjava-1/ch09\_-\_.md)
+  * [ch09 : 패키지와 접근 제어자](godofjava-12/ch09.md)
   * [ch10 : 상속](godofjava-2/ch10\_.md)
   * [ch12 : Object](godofjava-3/ch12\_object.md)
   * [ch13 : 인터페이스와 추상클래스, enum](godofjava-4/ch13\_-\_-\_enum.md)
