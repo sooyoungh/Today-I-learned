@@ -71,4 +71,9 @@
   * [ch23 : Collections - Set, Queue](godofjava/ch23-collections-set-queue.md)
   * [ch24 : Collections - Map](godofjava/ch24-collections-map.md)
   * [ch25 : Thread](godofjava/ch25-thread.md)
-* [🏙 Projects](projects.md)
+
+## 🏙 Projects
+
+* [☕ Cafemate](projects/cafemate/README.md)
+  * [Page 2](projects/cafemate/page-2.md)
+* [🐯 MUrangE](projects/murange.md)
