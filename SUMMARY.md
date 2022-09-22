@@ -48,17 +48,17 @@
   * [Singleton 패턴](oop/singleton.md)
   * [Adapter 패턴](oop/adpater.md)
   * [Decorator 패턴](oop/decorator.md)
-* [🚀 Network](network/README.md)
-  * [전송 계층 3 - TCP LINGER 옵션](network/linger.md)
-  * [전송 계층 4 - TCP/IP Socket Programming 알아보기](network/socket\_programming.md)
-  * [어플리케이션 계층 1 - HTTP 알아보기](network/http.md)
-  * [어플리케이션 계층 2 - HTTPS와 SSL](network/ssl.md)
-  * [어플리케이션 계층 3 - 쿠키와 세션](network/cookie\_session.md)
-* [💌 Database](database/README.md)
-  * [JDBC - Class.forName() 동작 방식](database/classforname.md)
-* [💻 OS](os/README.md)
-  * [프로세스와 스레드](os/proc\_thread.md)
-  * [교착상태 알아보기](os/\_.md)
+* [💡 CS](today-i-learned/cs/README.md)
+  * [🚀 Network](today-i-learned/cs/network/README.md)
+    * [전송 계층 3 - TCP LINGER 옵션](today-i-learned/cs/network/linger.md)
+    * [전송 계층 4 - TCP/IP Socket Programming 알아보기](today-i-learned/cs/network/socket\_programming.md)
+    * [어플리케이션 계층 1 - HTTP 알아보기](today-i-learned/cs/network/http.md)
+    * [어플리케이션 계층 2 - HTTPS와 SSL](today-i-learned/cs/network/ssl.md)
+    * [어플리케이션 계층 3 - 쿠키와 세션](today-i-learned/cs/network/cookie\_session.md)
+  * [💌 Database](today-i-learned/cs/database/README.md)
+    * [JDBC - Class.forName() 동작 방식](today-i-learned/cs/database/classforname.md)
+  * [💻 OS](today-i-learned/cs/os/README.md)
+    * [프로세스와 스레드](today-i-learned/cs/os/proc\_thread.md)
 
 ## 🏙 Projects
 
@@ -67,7 +67,7 @@
 
 ## 📚 Book
 
-* [📒 GodOfJava](godofjava-12/README.md)
+* [📒 자바의 신](godofjava-12/README.md)
   * [GodOfJava(자바의 신) 목차](godofjava-12/undefined.md)
   * [ch08 : 참조 자료형](godofjava-12/ch08\_.md)
   * [ch09 : 패키지와 접근 제어자](godofjava-12/ch09.md)
@@ -82,3 +82,4 @@
   * [ch23 : Collections - Set, Queue](godofjava-12/ch23\_collections\_set\_queue.md)
   * [ch24 : Collections - Map](godofjava-12/ch24\_collections\_map.md)
   * [ch25 : Thread](godofjava-12/ch25\_thread.md)
+* [📗 토비의 Spring](book/spring.md)
