@@ -42,6 +42,7 @@
     * [자바와 웹프로그래밍](java/java-web/web.md)
     * [자바와 DB - JDBC, 커넥션풀](java/java-web/db.md)
 * [🎁 OOP](oop/README.md)
+  * [Factory Method 패턴 자세히](today-i-learned/oop/factory-method.md)
   * [객체지향 4가지 특징](oop/oop.md)
   * [객체 지향 SOLID 5원칙](oop/solid.md)
   * [Singleton 패턴](oop/singleton.md)
