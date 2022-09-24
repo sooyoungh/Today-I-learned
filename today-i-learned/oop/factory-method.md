@@ -1,7 +1,5 @@
 # Factory Method 패턴 자세히
 
-
-
 > Factory Method 패턴은 객체의 생성 방식과 관련된 디자인 패턴이다. 객체를 사용하는 클래스와 생성하는 클래스를 분리한다. 이를 통해 새로운 구현 클래스 추 시, 기존 프로그램 구조가 변경되지 않는다. 즉, 기존 코드는 바뀌지 않으면서 기능 확장에는 열려있도록 하는 패턴이다(SOLID OCP 원칙을 지킨다).
 
 
@@ -16,11 +14,11 @@
 
 ### 1. Facctory 없이 객체 생성 시
 
-\<aside>&#x20;
 
-️ 객체 생성 시 클라이언트단에서 구체화에 의존하는 방법(Factory 사용X, 객체 사용부와 생성부가 분리되지 않음)
 
-\</aside>
+```
+🖍 객체 생성 시 클라이언트단에서 구체화에 의존하는 방법(Factory 사용X, 객체 사용부와 생성부가 분리되지 않음)
+```
 
 
 
@@ -81,13 +79,9 @@ toyStore.orderToy(new TeddyBear());
 
 ### 2. Simple Factory
 
-\<aside>&#x20;
-
-✏️ 객체 생성용 서브 클래스(Factory)를 분리하는 방법
-
-\</aside>
-
-
+```
+🖍 객체 생성용 서브 클래스(Factory)를 분리하는 방법
+```
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Simple Factory</p></figcaption></figure>
 
@@ -173,13 +167,9 @@ toyStore.orderToy("MiniCar");
 
 ### 3. 팩토리 메소드
 
-
-
-\<aside>&#x20;
-
-✏️ 객체 생성용 Factory 클래스를 분리하고, 어떤 객체를 생성할지 서브 클래스가 결정하는 방식
-
-\</aside>
+```
+🖍 객체 생성용 Factory 클래스를 분리하고, 어떤 객체를 생성할지 서브 클래스가 결정하는 방식
+```
 
 <figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Factory Method Pattern</p></figcaption></figure>
 
