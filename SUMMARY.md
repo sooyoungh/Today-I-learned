@@ -9,7 +9,6 @@
     * [자바에 Call By Value만 있는 이유 - JVM의 GC](java/jvm/call\_by\_value.md)
     * [문자열 인코딩 방식 알아보기](java/jvm/encoding.md)
     * [Switch문은 if문보다 빠른가? (인코딩 방식 비교)](java/jvm/switch\_encoding.md)
-    * [Page 1](java/jvm/page-1.md)
   * [🍇 자바의 다형성](java/undefined/README.md)
     * [자바의 변성 알아보기](java/undefined/undefined.md)
     * [List<> = new ArrayList<> 쓰는 이유](java/undefined/upcasting.md)
@@ -63,8 +62,7 @@
 ## 🏙 Projects
 
 * [☕ Cafemate](projects/cafemate.md)
-* [🐯 MUrangE](projects/murange/README.md)
-  * [Page 2](projects/murange/page-2.md)
+* [🐯 MUrangE](projects/murange.md)
 
 ## 📚 Book
 

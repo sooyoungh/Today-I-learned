@@ -194,31 +194,45 @@ public class Square extends Rectangle {
 
 구체 클래스에 의존하면 변경이 어려워진다. 추상화에 의존할 경우, 확장과 변경이 쉽다. 새로운 하위클래스를 만들어 상속받게 할 수 있고, 실 구현체를 변경해주면 된다. 따라서 구체화가 아닌 추상화에 의존해야 한다. OCP와 연관되는 규칙이나, DIP가 더 구체적인 규칙이다.
 
-*   `BAD` 구체 클래스를 의존하는 상황
+*   `BAD` 구체 클래스를 의존하는 상황 -> Car가 Engine 변경 시 Car 클래스 내부 코드를 변경해야 한다.&#x20;
 
     ```java
-    // Engine 구체 클래스
+    // Engine 인터페이스
     public class Engine {
        public void start() {...}
     }
 
-    // 구체화(클래스)에 의존
+    // Engine 인터페이스를 상속받은 클래스들
+    public class PetrolEngine implements Engine {
+       public void start() {...}
+    }
+    public class DieselEngine implements Engine {
+       public void start() {...}
+    }
+
+    // 구체화 클래스(PetrolEngine or DieselEngine)에 의존 -> Engine 변경 시, 클래스 내부 코드 변
     public class Car {
-        private Engine engine;
-        public Car(Engine e) {
-            engine = e;
-        }
-        public void start() {
-            engine.start();
-        }
+        // private final Engine engine = new PetrolEngine();
+        // 변경 시
+        private final Engine engine = new DieselEngine();
+        
     }
     ```
-*   `GOOD` 추상화(인터페이스)에 의존하는 상황 ([아래 예시](../java/undefined/prefer\_composition\_than\_inheritance.md)) 만약 엔진 종류를 추가하고 싶으면 Engine 인터페이스를 상속받는 새 엔진 클래스를 만들어주면 된다.
+*   `GOOD` 추상화(인터페이스)에 의존하는 상황 ([아래 예시](../java/undefined/prefer\_composition\_than\_inheritance.md)) 의존성 주입을 통해 Car 객체가 Engine 객체를 주입받는다. -> 다른 Engine 객체로 바꾸려면, Car 클래스 내부 코드를 변경하지 않고 새로 Engine 객체를  주입하면 된다.
 
     ```java
     // Engine 인터페이스
     public interface Engine {
         public void start();
+    }
+
+    // Engine 인터페이스를 상속받은 클래스들
+    // Car 사용시 필요한 클래스(PetrolEngine/DieselEngine)를 사용하면 된다.
+    public class PetrolEngine implements Engine {
+       public void start() {...}
+    }
+    public class DieselEngine implements Engine {
+       public void start() {...}
     }
 
     // 추상화(인터페이스)에 의존
@@ -232,16 +246,7 @@ public class Square extends Rectangle {
         }
     }
 
-    // Engine 인터페이스를 상속받은 클래스들
-    // Car 사용시 필요한 클래스(PetrolEngine/DieselEngine)를 사용하면 된다.
-    public class PetrolEngine implements Engine {
-       public void start() {...}
-    }
-    public class DieselEngine implements Engine {
-       public void start() {...}
-    }
-
-    // 의존성 주입 -> 여기서 엔진 종류 선택해서 주입
+    // 의존성 주입 -> 여기서(클라이언트 코) 엔진 종류 선택해서 주입
     Car myCar1 = new Car(new PetrolEngine);
     Car myCar2 = new Car(new DieselEngine);
     ```
