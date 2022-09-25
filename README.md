@@ -80,6 +80,7 @@
 #### **Java Spring 디자인 패턴** 🖼
 
 * [Singleton 패턴](oop/singleton.md)
+* [Factory Method 패턴](today-i-learned/oop/factory-method.md)
 * [Adapter 패턴](oop/adpater.md)
 * [Decorator 패턴](oop/decorator.md)
 
