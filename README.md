@@ -114,4 +114,4 @@
 ## 📕 Book
 
 * [토비의 Spring](book/spring.md)
-* [자바의 신 (GodOfJava) 정리](godofjava-12/undefined.md)
+* [자바의 신 (GodOfJava) 정리](godofjava-12/)
