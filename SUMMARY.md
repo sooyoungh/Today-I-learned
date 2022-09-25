@@ -66,6 +66,8 @@
 
 ## 📚 Book
 
+* [📗 토비의 Spring](book/spring.md)
+  * [1장-1 리팩토링](book/spring/1-1.md)
 * [📒 자바의 신](godofjava-12/README.md)
   * [GodOfJava(자바의 신) 목차](godofjava-12/undefined.md)
   * [ch08 : 참조 자료형](godofjava-12/ch08\_.md)
@@ -81,5 +83,3 @@
   * [ch23 : Collections - Set, Queue](godofjava-12/ch23\_collections\_set\_queue.md)
   * [ch24 : Collections - Map](godofjava-12/ch24\_collections\_map.md)
   * [ch25 : Thread](godofjava-12/ch25\_thread.md)
-* [📗 토비의 Spring](book/spring.md)
-  * [1장-1 리팩토링](book/spring/1-1.md)
