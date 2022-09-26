@@ -15,7 +15,7 @@ ConnectionMaker e = new EConnectionMaker();
 UserDao dao1 = new UserDao(e);
 ```
 
-하지만 여기 UserDaoTest에 UserDao의 기능만 테스트해야하는데, **ConnectionMaker 객체 생성과 해당 객체를 UserDao에 주입하는 역할까지 담당**하고 있다. 즉, 클라이언트가 관심사가 아닌 일까지 하고 있다. 따라서 역할과 책임의 분리가 필요하다. <mark style="background-color:red;">클라이언트단에서는 UserDao 객체를 사용하는 부분만 남기고, 객체를 생성하는 부분은 분리하려 한다.</mark>
+하지만 이 클라이언트단(UserDaoTest)에서 UserDao의 기능만 테스트해야하는데, **ConnectionMaker 객체 생성과 해당 객체를 UserDao에 주입하는 역할까지 담당**하고 있다. 즉, 클라이언트가 관심사가 아닌 일까지 하고 있다. 따라서 역할과 책임의 분리가 필요하다. <mark style="background-color:red;">클라이언트단에서는 UserDao 객체를 사용하는 부분만 남기고, 객체를 생성하는 부분은 분리하려 한다.</mark>
 
 
 
@@ -168,7 +168,7 @@ public class UserDaoTest {
 }
 ```
 
-이렇게 클라이언트단(**객체 사용 부분**)에서 **객체 구현부**, 즉 구체적인 로직을 알 필요가 없다. 클라이언트에서는 일관된 방식으로 객체를 사용할 수 있다. 따라서 변경/확장이 쉽다.
+이렇게 클라이언트단(**객체 사용 부분**)에서 **객체 구현부**, 즉 구체적인 로직을 알 필요가 없다. 클라이언트에서는 구현체가 바뀌더라도 일관된 방식으로 객체를 사용할 수 있다. 따라서 변경/확장이 쉽다.
 
 
 
