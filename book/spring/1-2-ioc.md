@@ -172,5 +172,49 @@ public class UserDaoTest {
 
 
 
+### 4. DI (의존 관계 주입)
+
+{% hint style="info" %}
+**의존관계 주입이란**
+
+두 객체 사이에 의존관계가 있을 때,
+
+의존 객체의 구체적인 타입을 외부로부터 런타임 시에 주입(연결)해주는 방식
+{% endhint %}
+
+__
+
+클라이언트 객체(의존 객체를 주입받는 주체)는 의존 객체의 인터페이스에 의존하고, 구체적인 타입은 런타임 시에 주입해준다.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><strong>DI</strong></p></figcaption></figure>
+
+* 클라이언트 객체 : `UserDao`
+* 의존 대상 : `ConnectionMaker` 인터페이스
+
+```java
+// 클라이언트 객체
+public class UserDao {
+
+    private ConnectionMaker connectionMaker;
+
+    public UserDao(ConnectionMaker connectionMaker) { // 인터페이스
+        this.connectionMaker= connectionMaker;
+    }
+
+}
+
+// 의존성 주입
+ConnectionMaker d = new DConnectionMaker();
+UserDao dao = new UserDao(d);
+
+// 구현체 바꾸어도 클라이언트 코드만 변경
+ConnectionMaker e = new EConnectionMaker();
+UserDao dao = new UserDao(e);
+```
+
+`UserDao`가 `ConnectionMaker` 인터페이스에게 의존하고 있다. 런타임 시에 동적으로 의존 객체를 선택할 수 있다. 즉, 구현체를 바꾸어도 클라이언트단 코드만 변경되고, 클래스 내부 코드는 바뀌지 않는다. 결합도가 낮고 변경에 자유롭다.
+
+
+
 
 

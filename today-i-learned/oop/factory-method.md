@@ -23,7 +23,7 @@
 
 
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>No Factory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>No Factory</p></figcaption></figure>
 
 * **Product 클래스 → 인스턴스 생성하는데 사용함**
 
