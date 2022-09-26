@@ -180,6 +180,8 @@ public class UserDaoTest {
 두 객체 사이에 의존관계가 있을 때,
 
 의존 객체의 구체적인 타입을 외부로부터 런타임 시에 주입(연결)해주는 방식
+
+\=> 클래스 간 결합도를 낮추고 변경에 유연해지기 때문에 사용한다.
 {% endhint %}
 
 __
@@ -212,7 +214,7 @@ ConnectionMaker e = new EConnectionMaker();
 UserDao dao = new UserDao(e);
 ```
 
-`UserDao`가 `ConnectionMaker` 인터페이스에게 의존하고 있다. 런타임 시에 동적으로 의존 객체를 선택할 수 있다. 즉, 구현체를 바꾸어도 클라이언트단 코드만 변경되고, 클래스 내부 코드는 바뀌지 않는다. 결합도가 낮고 변경에 자유롭다.
+`UserDao`가 `ConnectionMaker` 인터페이스에게 의존하고 있다. 런타임 시에 동적으로 의존 객체를 선택할 수 있다. <mark style="background-color:yellow;">즉, 구현체를 바꾸어도 클라이언트단 코드만 변경되고, 클래스 내부 코드는 바뀌지 않는다. 결합도가 낮고 변경에 자유롭다.</mark>
 
 
 
