@@ -23,7 +23,7 @@
 
 
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>No Factory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>No Factory</p></figcaption></figure>
 
 * **Product 클래스 → 인스턴스 생성하는데 사용함**
 
@@ -84,7 +84,7 @@ toyStore.orderToy(new TeddyBear());
 💡 객체 생성용 서브 클래스(Factory)를 분리하는 방법
 ```
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>Simple Factory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Simple Factory</p></figcaption></figure>
 
 객체 생성하는 Factory 클래스를 따로 만드는 방법이다. ToyStore은 Factory를 통해 Toy를 생성한다. 단, ToyFactory 클래스 코드를 보면 OCP가 지켜지지 않음을 알 수 있다.
 
@@ -172,7 +172,7 @@ toyStore.orderToy("MiniCar");
 💡 객체 생성용 Factory 클래스를 분리하고, 어떤 객체를 생성할지 서브 클래스가 결정하는 방식
 ```
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Factory Method Pattern</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Factory Method Pattern</p></figcaption></figure>
 
 객체를 생성하는 서브 클래스(`Factory`)를 만들어, 어떤 객체를 생성할지는 서브 클래스(`Factory`)가 결정한다. 기존 클래스에서는 객체 생성에 대한 정보를 가지지 않고, 서브 클래스(Factory)에서만 조작할 수 있다. 즉, 클래스의 생성과 사용을 분리하여 결합도를 낮춘다.
 
