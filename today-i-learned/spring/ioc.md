@@ -151,7 +151,7 @@ new A(new BImpl1());
 
 ### 생성자 주입을 사용해야 하는 이유
 
-생성자를 통해서 구현체를 주입받을 경우, 반드시 구현체(`BIml1`)를 주입받아야 객체 A가 생성된다. 따라서 객체 A는 객체 B가 항상 있다. 필드주입이나 수정자 주입처럼 B 객체가 없어 `bmethod()` 실행시 NPE가 발생하는 일이 없다. 또한 A와 B의 의존관계를 클라이언트 코드에 노출시켜 컴파일 타임에 에러를 잡을 수 있다.
+생성자를 통해서 구현체를 주입받을 경우, 반드시 구현체(`BIml1`)를 주입받아야 객체 A가 생성된다. 따라서 <mark style="background-color:yellow;">객체 A는 객체 B가 항상 있다. 필드 주입이나 수정자 주입처럼 B 객체가 없어</mark> <mark style="background-color:yellow;"></mark><mark style="background-color:yellow;">`bmethod()`</mark> <mark style="background-color:yellow;"></mark><mark style="background-color:yellow;">실행시 NPE가 발생하는 일이 없다</mark>. 또한 A와 B의 의존관계를 클라이언트 코드에 노출시켜 <mark style="background-color:yellow;">컴파일 타임에 에러</mark>를 잡을 수 있다.
 
 
 
