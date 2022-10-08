@@ -75,6 +75,7 @@
   * [1장-2 스프링의 IoC](book/spring/1-2-ioc.md)
   * [2장 테스트](book/spring/2.md)
   * [3장 템플릿](book/spring/3.md)
+  * [4장 예외](book/spring/4.md)
 * [📒 자바의 신](godofjava-12/README.md)
   * [ch08 : 참조 자료형](godofjava-12/ch08\_.md)
   * [ch09 : 패키지와 접근 제어자](godofjava-12/ch09.md)
