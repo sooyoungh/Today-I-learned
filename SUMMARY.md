@@ -36,7 +36,7 @@
     * [5. 자바의 직렬화/역직렬화](java/io/undefined.md)
   * [⏳ Java와 시간](java/java/README.md)
     * [Date, Calendar 쓰지 말자](java/java/date\_calendar\_.md)
-    * [java.time 패키지 살펴보기](java/java/java.time.md)
+    * [Date 대신 LocalDate를 쓰자 - java.time 패키지 살펴보기](java/java/java.time.md)
   * [🕹 Java와 Web](java/java-web/README.md)
     * [자바와 웹프로그래밍](java/java-web/web.md)
     * [자바와 DB - JDBC, 커넥션풀](java/java-web/db.md)
