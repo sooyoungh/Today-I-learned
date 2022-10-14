@@ -60,7 +60,7 @@
   * [💻 OS](os/README.md)
     * [프로세스와 스레드](os/proc\_thread.md)
 * [🌺 Spring](today-i-learned/spring/README.md)
-  * [🧀 스프링의 IoC와 생성자 주입해야하는 이유](today-i-learned/spring/ioc.md)
+  * [🧀 스프링의 IoC와 DI 중 생성자 주입을 사용해야 하는 이유](today-i-learned/spring/ioc-di.md)
 
 ## 🏙 Projects
 
