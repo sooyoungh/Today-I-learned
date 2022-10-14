@@ -60,11 +60,13 @@
     * [프로세스와 스레드](os/proc\_thread.md)
 * [🌺 Spring](today-i-learned/spring/README.md)
   * [🧀 스프링의 IoC와 생성자 주입해야하는 이유](today-i-learned/spring/ioc.md)
-  * [🗝 Spring Security](today-i-learned/spring/spring-security/README.md)
-    * [Page 3](today-i-learned/spring/spring-security/page-3.md)
 
 ## 🏙 Projects
 
+* [📖 Book Club](projects/book-club/README.md)
+  * [🗝 로그인과 세션, Spring Security](projects/book-club/spring-security/README.md)
+    * [1 - 로그인 구현 with 쿠키, 세션](projects/book-club/spring-security/1-with.md)
+    * [2 - 다중 서버에서 로그인이 세션 유지될까?](projects/book-club/spring-security/2.md)
 * [☕ Cafemate](projects/cafemate.md)
 * [🐯 MUrangE](projects/murange.md)
 

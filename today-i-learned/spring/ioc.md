@@ -10,7 +10,7 @@ IoC는 객체의 생성, 객체 생명 관리, 흐름 제어, 의존 관계 설�
 
 아래는 개발자가 직접 객체를 생성하는 경우와 IoC가 적용된 경우이다. A 객체가 B 객체에 의존하는 상황이다.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>IoC 적용 예시</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption><p>IoC 적용 예시</p></figcaption></figure>
 
 1. **개발자가 직접 객체를 생성하여 코드를 제어하는 경우 (IoC X)**
 
