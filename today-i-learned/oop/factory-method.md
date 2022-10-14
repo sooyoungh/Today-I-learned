@@ -84,7 +84,7 @@ toyStore.orderToy(new TeddyBear());
 💡 객체 생성용 서브 클래스(Factory)를 분리하는 방법
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p>Simple Factory</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>Simple Factory</p></figcaption></figure>
 
 객체 생성하는 Factory 클래스를 따로 만드는 방법이다. ToyStore은 Factory를 통해 Toy를 생성한다. 단, ToyFactory 클래스 코드를 보면 OCP가 지켜지지 않음을 알 수 있다.
 
