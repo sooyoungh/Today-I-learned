@@ -66,6 +66,7 @@
 
 * [📖 Book Club](projects/book-club/README.md)
   * [🗝 로그인과 세션, Spring Security](projects/book-club/spring-security/README.md)
+    * [3. Spring Security 기본 로직 이해하기](projects/book-club/spring-security/3.-spring-security.md)
     * [1. 로그인 구현/유지 with 쿠키, 세션](projects/book-club/spring-security/1.-with.md)
     * [2. 다중 서버에서 로그인이 세션 유지될까?](projects/book-club/spring-security/2..md)
 * [☕ Cafemate](projects/cafemate.md)
