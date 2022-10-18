@@ -25,4 +25,4 @@ Thread-Safe하다는 의미는 동기화(Synchronization)처리를 했다는 뜻
 | 배열 자료구조   | Vector                      | ArrayList / LinkedList          |
 | LIFO 자료구조 | Stack                       | Deque                           |
 | 해시 자료구조   | Hashtable                   | HashMap                         |
-| 문자열       | String                      | StringBuffer / StringBuilder    |
+| 문자열       | String / StringBuffer       | StringBuilder                   |
