@@ -35,12 +35,12 @@ Java I/O는 입출력을 스트림 단위로 한다. 스트림은 Byte 형태로
 스트림 생성 후에 보조 스트림을 생성하여 사용한다.
 
 * **보조 스트림**
-  * FilterInput/OutputStream : 필터를 이용한 입출력 처리
+  * **Buffered**Input/OutputStream : 버퍼를 이용한 입출력 성능향상
     * 인풋 데이터를 Buffer에 임시로 담아두고, 한꺼번에 Buffer에 있는 값을 전달한다.
     * 버퍼가 없다면❓ 사용자가 입력하는 순간마다 전달되어 전달되는 횟수가 많다. 즉, 프로그램의 성능 저하를 유발한다.
     * 단, 이때의 버퍼는 커널 버퍼가 아니라 JVM의 버퍼이다 -> 한번 거쳐가기에 속도 느리다.
-  * BufferedInput/OutputStream : 버퍼를 이용한 입출력 성능향상
   * DataInput/OutputStream : int, float와 같은 기본형 단위로 데이터를 처리
+  * FilterInput/OutputStream : 필터를 이용한 입출력 처리
 
 ## Java I/O의 단점
 
