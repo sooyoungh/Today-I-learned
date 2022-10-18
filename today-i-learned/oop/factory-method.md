@@ -6,7 +6,7 @@
 
 디자인 패턴 중에 Factory Method 패턴이 가장 이해하는데 오래 걸렸던 것 같다. 객체 생성을 위임하는 클래스를 따로 만드는 이유랑 예제가 안 와닿았던 것 같아 아래처럼 이전 방식(Factory 사용X, Simple Factory 방식)들도 정리해보았다.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Factory Method 패턴을 사용하는 이유를 알아보기 위해 Fac 없는 방식과 Simple Fac 방도 함께 정</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Factory Method 패턴을 사용하는 이유를 알아보기 위해 Fac 없는 방식과 Simple Fac 방도 함께 정</p></figcaption></figure>
 
 위처럼 Factory Method Pattern을 알기 위해 우선 Factory 없이 객체 생성하는 방식과 Simple Factory 방식도 함께 정리하였다.
 
@@ -172,7 +172,7 @@ toyStore.orderToy("MiniCar");
 💡 객체 생성용 Factory 클래스를 분리하고, 어떤 객체를 생성할지 서브 클래스가 결정하는 방식
 ```
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>Factory Method Pattern</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>Factory Method Pattern</p></figcaption></figure>
 
 객체를 생성하는 서브 클래스(`Factory`)를 만들어, 어떤 객체를 생성할지는 서브 클래스(`Factory`)가 결정한다. 기존 클래스에서는 객체 생성에 대한 정보를 가지지 않고, 서브 클래스(Factory)에서만 조작할 수 있다. 즉, 클래스의 생성과 사용을 분리하여 결합도를 낮춘다.
 
