@@ -6,30 +6,6 @@
 
 
 
-## 🌟 Project&#x20;
-
-* [Bookclub](projects/book-club/)
-
-```
-// Some code
-```
-
-* CAFEMATE
-
-```
-// Some code
-```
-
-* MUrangE
-
-```
-// Some code
-```
-
-
-
-
-
 ## 📝 Today I learned 목차&#x20;
 
 ```
