@@ -61,15 +61,14 @@
     * [프로세스와 스레드](os/proc\_thread.md)
 * [🌺 Spring](today-i-learned/spring/README.md)
   * [🧀 스프링의 IoC (+ 생성자 주입을 사용해야 하는 이유)](today-i-learned/spring/ioc-+.md)
+  * [🗝 로그인과 세션, Spring Security](today-i-learned/spring/spring-security/README.md)
+    * [1. 로그인 구현 with 쿠키, 세션](today-i-learned/spring/spring-security/1.-with.md)
+    * [2. 다중 서버에서 로그인이 세션 유지될까?](today-i-learned/spring/spring-security/2..md)
+    * [3. Spring Security 기본 로직 이해하기](today-i-learned/spring/spring-security/3.-spring-security.md)
+    * [4. 로그인 구현 with Spring Security](today-i-learned/spring/spring-security/4.-with-spring-security.md)
 
 ## 🏙 Projects
 
-* [📖 Book Club](projects/book-club/README.md)
-  * [🗝 로그인과 세션, Spring Security](projects/book-club/spring-security/README.md)
-    * [1. 로그인 구현 with 쿠키, 세션](projects/book-club/spring-security/1.-with.md)
-    * [2. 다중 서버에서 로그인이 세션 유지될까?](projects/book-club/spring-security/2..md)
-    * [3. Spring Security 기본 로직 이해하기](projects/book-club/spring-security/3.-spring-security.md)
-    * [4. 로그인 구현 with Spring Security](projects/book-club/spring-security/4.-with-spring-security.md)
 * [☕ Cafemate](projects/cafemate.md)
 * [🐯 MUrangE](projects/murange.md)
 
