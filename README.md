@@ -2,6 +2,10 @@
 
 [<img src=".gitbook/assets/77563814.png" alt="" data-size="line"> Github 계정](https://github.com/sooyoungh)
 
+[토비의 스프링 - 리팩토링](book/spring/1-1.md)
+
+[디자인 패턴 ](today-i-learned/oop/undefined/)
+
 
 
 
@@ -25,8 +29,8 @@
 
 ### 🔮 [객체 지향](oop/)
 
-* **Java와 객체 지향** 🎲
-* **Java Spring 디자인 패턴** 🖼
+* ****[**Java와 객체 지향**](today-i-learned/oop/undefined-1/) 🎲
+* ****[**디자인 패턴**](today-i-learned/oop/undefined/) 🖼
 
 ### 🌺 [Spring](today-i-learned/spring/)
 

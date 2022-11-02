@@ -218,7 +218,7 @@ public class Square extends Rectangle {
         
     }
     ```
-*   `GOOD` 추상화(인터페이스)에 의존하는 상황 ([아래 예시](../java/undefined/prefer\_composition\_than\_inheritance.md)) 의존성 주입을 통해 Car 객체가 Engine 객체를 주입받는다. -> 다른 Engine 객체로 바꾸려면, Car 클래스 내부 코드를 변경하지 않고 새로 Engine 객체를  주입하면 된다.
+*   `GOOD` 추상화(인터페이스)에 의존하는 상황 ([아래 예시](../../../java/undefined/prefer\_composition\_than\_inheritance.md)) 의존성 주입을 통해 Car 객체가 Engine 객체를 주입받는다. -> 다른 Engine 객체로 바꾸려면, Car 클래스 내부 코드를 변경하지 않고 새로 Engine 객체를  주입하면 된다.
 
     ```java
     // Engine 인터페이스

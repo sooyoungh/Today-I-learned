@@ -41,12 +41,14 @@
     * [자바와 웹프로그래밍](java/java-web/web.md)
     * [자바와 DB - JDBC, 커넥션풀](java/java-web/db.md)
 * [🎁 OOP](oop/README.md)
-  * [객체지향 4가지 특징](oop/oop.md)
-  * [객체 지향 SOLID 5원칙](oop/solid.md)
-  * [Singleton 패턴](oop/singleton.md)
-  * [Factory Method 패턴 자세히](today-i-learned/oop/factory-method.md)
-  * [Adapter 패턴](oop/adpater.md)
-  * [Decorator 패턴](oop/decorator.md)
+  * [디자인 패턴](today-i-learned/oop/undefined/README.md)
+    * [Singleton 패턴](today-i-learned/oop/undefined/singleton.md)
+    * [Factory Method 패턴 자세히](today-i-learned/oop/undefined/factory-method.md)
+    * [Adapter 패턴](today-i-learned/oop/undefined/adpater.md)
+    * [Decorator 패턴](today-i-learned/oop/undefined/decorator.md)
+  * [객체 지향 특징](today-i-learned/oop/undefined-1/README.md)
+    * [객체 지향 SOLID 5원칙](today-i-learned/oop/undefined-1/solid.md)
+    * [객체지향 4가지 특징](today-i-learned/oop/undefined-1/oop.md)
 * [💡 CS](today-i-learned/cs/README.md)
   * [🚀 Network](network/README.md)
     * [Page 1](today-i-learned/cs/network/page-1.md)
@@ -94,3 +96,7 @@
   * [ch23 : Collections - Set, Queue](godofjava-12/ch23\_collections\_set\_queue.md)
   * [ch24 : Collections - Map](godofjava-12/ch24\_collections\_map.md)
   * [ch25 : Thread](godofjava-12/ch25\_thread.md)
+
+## 📝 회고
+
+* [Untitled](undefined/untitled.md)
