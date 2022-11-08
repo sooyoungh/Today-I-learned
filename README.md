@@ -2,7 +2,7 @@
 
 [<img src=".gitbook/assets/77563814.png" alt="" data-size="line"> Github 계정](https://github.com/sooyoungh)
 
-[토비의 스프링 - 리팩토링](book/spring/1-1.md)
+[토비의 스프링 - 리팩토링](today-i-learned/book/spring/1-1.md)
 
 [디자인 패턴 ](today-i-learned/oop/undefined/)
 
@@ -42,5 +42,5 @@
 
 ### 📚 [Book](broken-reference)
 
-* [토비의 스프링](book/spring.md)
-* [자바의 신](godofjava-12/)
+* [토비의 스프링](today-i-learned/book/spring/)
+* [자바의 신](today-i-learned/book/godofjava-12/)

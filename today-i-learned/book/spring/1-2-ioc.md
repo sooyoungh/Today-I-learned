@@ -184,7 +184,7 @@ __
 
 클라이언트 객체(의존 객체를 주입받는 주체)는 의존 객체의 인터페이스에 의존하고, 구체적인 타입은 런타임 시에 주입해준다.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><strong>DI</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><strong>DI</strong></p></figcaption></figure>
 
 * 클라이언트 객체 : `UserDao`
 * 의존 대상 : `ConnectionMaker` 인터페이스
