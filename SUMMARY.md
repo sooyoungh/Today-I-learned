@@ -89,13 +89,14 @@
     * [ch23 : Collections - Set, Queue](today-i-learned/book/godofjava-12/ch23\_collections\_set\_queue.md)
     * [ch24 : Collections - Map](today-i-learned/book/godofjava-12/ch24\_collections\_map.md)
     * [ch25 : Thread](today-i-learned/book/godofjava-12/ch25\_thread.md)
+* [🧹 Clean Coding](today-i-learned/clean-coding.md)
 
 ## 🏙 Project
 
 * [☕ Cafemate](project/cafemate.md)
 * [🎵 MUrangE](project/murange.md)
 
-## 📝 회고
+## 📑 회고
 
 * [🌱 우테코 프리코스](undefined/undefined/README.md)
   * [\[우테코 프리코스\] 1주차 온보딩](undefined/undefined/1.md)
