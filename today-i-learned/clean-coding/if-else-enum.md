@@ -1,4 +1,4 @@
-# if-else 지양하기 - 1. Enum
+# if-else 대신 Enum 사용하기
 
 ## Enum
 
@@ -8,7 +8,7 @@ Enum 타입을 사용하면 관련 상수/기능들을 한곳에 모아두고 �
 
 
 
-### 1. 상수
+## 1. 상수
 
 아래 예제에선 Enum 타입별로 관련 상수(가격과 한글메뉴명)가 할당되어있다. 여기서 Enum 내장 메소드를 활용하면 여러 기능을 처리할 수 있다.
 
@@ -53,7 +53,7 @@ void test() {
 즉, Menu._values_()는 모든 Menu타입을 가진 리스트이다. 이 메소드를 활용하면 상수값으로 해당 Enum 타입을 찾을 수도 있다!
 
 ```java
-System.*out*.println(Arrays.*toString*(Menu.*values*()));
+System.out.println(Arrays.toString(Menu.values()));
 
 // 출력 : [AMERICANO, CAFE_LATTE, CAFE_MOCHA, CAPPUCCINO, TEA]
 ```
@@ -84,19 +84,22 @@ void test() {
 
 해당 타입의 존재여부도 확인할 수 있다.
 
-```java
-// Enum 클래스
-public static Boolean isGameOptionExist(String gameOption) {
-    return Stream.of(values())
-            .anyMatch(value -> gameOption.equals(value.message));
+<pre class="language-java"><code class="lang-java">// Enum 클래스
+public static Boolean isMenuExist(String korean) {
+    return Arrays.stream(values())
+        .anyMatch(value -> korean.equals(value.korean));
 }
+
 
 // Test 코드
 @Test
 void test() {
-    
-}
-```
+    Boolean isAmericanoExist = Menu.isMenuExist("아메리카노");
+    Boolean isMilkTeaExist = Menu.isMenuExist("밀크티");
+
+<strong>    Assertions.assertThat(isAmericanoExist).isTrue();
+</strong>    Assertions.assertThat(isMilkTeaExist).isFalse();
+ }</code></pre>
 
 #### 타입별로 같은 연산일 경우
 
@@ -128,11 +131,11 @@ void test3() {
 
 
 
-### 2. 연산**식**
+## 2. 연산**식**
 
 Enum 타입별로 연산식이 다를 경우, 연산식 자체를 상수화해주거나, 오버라이딩해줄 수 있다. 아래는 사격 게임에서 사용자가 맞춘 과녁이 어느 구역이냐에 따라 얻는 점수가 다르다고 가정한 상황이다.
 
-#### 연산식 상수화
+### 연산식 상수화
 
 ```java
 public enum Prize {
@@ -154,7 +157,7 @@ public enum Prize {
 }
 ```
 
-#### 오버라이딩
+### 오버라이딩
 
 ```java
 public enum Prize {
@@ -194,7 +197,7 @@ public enum Prize {
 @Test
 void test() {
     int resultDouble = Prize.DOUBLE.calculate(100);
-		int resultBONUS = Prize.BONUS.calculate(100);
+    int resultBONUS = Prize.BONUS.calculate(100);
 
     Assertions.assertThat(resultDouble).isEqualTo(200);
     Assertions.assertThat(resultBONUS).isEqualTo(150);
@@ -203,11 +206,11 @@ void test() {
 
 
 
-### 3. Enum으로 if-else 대신하기
+## 3. Enum으로 if-else 대신하기
 
 위에서 사격 구역 별로 점수가 다르게 반환되는 상황에서 if-else와 Enum을 비교해보았다.
 
-#### if-else만 사용
+### if-else만 사용
 
 if- else문만으로 구현하면 아래처럼 코드가 길고 복잡해진다. 가독성이 떨어지고, 각 분기 상황마다 뭔가를 수정해줄 때도 불편하다.
 
@@ -226,28 +229,27 @@ void getResult(String korean, int count) {
     } else if (korean.equals("더블보너스")) {
         result =  count * 3;
     }
-		return result;
+    return result;
 }
 ```
 
-#### Enum 사용
+### Enum 사용
 
 Enum을 사용해서 관련 상수/연산식을 다 모아두었다. 여기서는 연산식 자체를 상수화했다.
 
 `calculateByKorean(String korean, int count)`메소드를 보면, `korean`값(한글 구역명)으로 Enum 타입을 찾고, 그 타입에 맞는 연산을 한다.
 
-```java
-public enum Prize {
+<pre class="language-java"><code class="lang-java">public enum Prize {
 
-		BASIC("베이직", i -> i),
-		DOUBLE("더블", i -> i * 2),
-		BONUS("보너스", i -> i + 50),
-		DOUBLE_AND_BONUS("더블보너스", i -> i * 3);
+    BASIC("베이직", i -> i),
+    DOUBLE("더블", i -> i * 2),
+    BONUS("보너스", i -> i + 50),
+    DOUBLE_AND_BONUS("더블보너스", i -> i * 3);
 
-    private Function<Integer, Integer> expression;
-    private String korean;
+<strong>    private Function&#x3C;Integer, Integer> expression;
+</strong>    private String korean;
 
-    Prize(String korean, Function<Integer, Integer> expression) {
+    Prize(String korean, Function&#x3C;Integer, Integer> expression) {
         this.korean = korean;
         this.expression = expression;
     }
@@ -263,8 +265,7 @@ public enum Prize {
                 .orElse(null)
                 .calculate(count);
     }
-}
-```
+}</code></pre>
 
 이렇게 Enum을 활용하면, 아래처럼 if-else 분기문 없이 한줄로 값을 찾을 수 있다!
 

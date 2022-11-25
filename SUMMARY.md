@@ -89,8 +89,8 @@
     * [ch23 : Collections - Set, Queue](today-i-learned/book/godofjava-12/ch23\_collections\_set\_queue.md)
     * [ch24 : Collections - Map](today-i-learned/book/godofjava-12/ch24\_collections\_map.md)
     * [ch25 : Thread](today-i-learned/book/godofjava-12/ch25\_thread.md)
-* [🧹 Clean Coding](today-i-learned/clean-coding/README.md)
-  * [if-else 지양하기 - 1. Enum](today-i-learned/clean-coding/if-else-1.-enum.md)
+* [🧹 Clean Coding](today-i-learned/clean-coding.md)
+  * [if-else 대신 Enum 사용하기](today-i-learned/clean-coding/if-else-enum.md)
 
 ## 🏙 Project
 
