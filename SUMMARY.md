@@ -22,7 +22,7 @@
   * [📦 Java Collections](java/java-collections/README.md)
     * [Tree를 사용하는 Collections](today-i-learned/java/java-collections/tree-collections.md)
     * [Hash를 사용하는 Collections](java/java-collections/collections\_hash.md)
-    * [Java Collections - Set](today-i-learned/java/java-collections/java-collections-set.md)
+    * [Set  파헤치기](today-i-learned/java/java-collections/set.md)
     * [Java Collections - List](java/java-collections/collections\_list.md)
     * [Java Collections - Map](today-i-learned/java/java-collections/java-collections-map.md)
     * [Thread-Safe 클래스는 필요할 경우에만 쓰자](java/java-collections/collections\_warning.md)
