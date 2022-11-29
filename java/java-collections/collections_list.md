@@ -1,10 +1,5 @@
 # Java Collections - List
 
-**목차**
-
-1. [배열과 ArrayList의 차이](collections\_list.md#배열과-arraylist의-차이)
-2. [`LinkedList` vs `ArrayList`](collections\_list.md#linkedlist-vs-arraylist)
-
 > List 인터페이스를 구현한 `ArrayList`, `LinkedList`에 대해 정리해보았다. ⇒ 기본적인 개념 정리는 여기로(자바의 신)
 
 ![image](https://user-images.githubusercontent.com/77563814/186736656-107127de-13ad-46fc-9216-c8f929b7e743.png)

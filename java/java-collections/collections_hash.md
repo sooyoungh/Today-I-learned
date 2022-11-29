@@ -1,9 +1,4 @@
-# Java Collections - Hash
-
-**목차**
-
-1. [Hash 사용하는 컬렉션 비교하기](collections\_hash.md#hash-사용하는-컬렉션-비교하기)
-2. [HashTable](collections\_hash.md#hashtable)
+# Hash를 사용하는 Collections
 
 > Hashing을 사용하는 `Hashtable`, `HashMap`, `HashSet`에 대해 정리해보았다.
 
@@ -28,7 +23,7 @@
 
 > `Hashtable` vs `HashMap`
 >
-> `Hashtable`과 `HashMap`은 Map을 구현하는 거의 비슷한 자료구조들이다. 그러나 `Hashtable`은 동기화를 지원하고, `HashMap`은 동기화를 지원하지 않는다. 따라서 멀티 스레드 환경에서는 `Hashtable`는 멀티 스레드 환경일 때 사용하고, 싱글 스레드 환경일 경우 `HashMap`을 사용해야 성능면에서 유리하다. (`Hashtable`는 성능이 떨어진다.) 또한 `HashMap`은 보조 해시 함수를 사용하여 해시 충돌이 덜하다는 장점이 있다.
+> `Hashtable`과 `HashMap`은 Map을 구현하는 거의 비슷한 자료구조들이다. 그러나 `Hashtable`은 동기화를 지원하고, `HashMap`은 동기화를 지원하지 않는다. 따라서 멀티 스레드 환경에서는 `Hashtable`는 멀티 스레드 환경일 때 사용하고, 싱글 스레드 환경일 경우 `HashMap`을 사용해야 성능면에서 유리하다. (`Hashtable`는 성능이 떨어진다.) 또한 `HashMap`은 보조 해시 함수를 사용하여 해시 충돌이 덜하다는 장점이 있다. 하지만 성능 상 차이가 크지 않다고 한다!
 >
 > `HashSet`vs `HashMap`
 >
