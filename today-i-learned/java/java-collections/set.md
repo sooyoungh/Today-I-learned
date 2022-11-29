@@ -31,9 +31,7 @@ Hash는 Key와 Value가 일대일로 저장되는 자료구조이다. `HashSet`�
 
 <figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
-근데 HashMap같은 경우는 `put(key, value)`으로 사용자가 키와 값을 저장한다. <mark style="background-color:red;">그럼 HashSet은 값을 어떻게 저장할까?</mark>
-
-Set은 `add(데이터)`으로 저장된다. **이때 사용자가 add하려는 데이터가 Key값이 되고, Dummy 객체가 Value로 저장된다.** 이것도 인텔리제이를 통해 찾아볼 수 있었다.
+근데 HashMap같은 경우는 `put(key, value)`으로 사용자가 키와 값을 저장한다. <mark style="background-color:yellow;">그럼 HashSet은 값을 어떻게 저장할까?</mark> Set은 `add(데이터)`으로 저장된다. **이때 사용자가 add하려는 데이터가 Key값이 되고, Dummy 객체가 Value로 저장된다.** 이것도 인텔리제이를 통해 찾아볼 수 있었다.
 
 * `Value(값)`으로 저장될 Dummy 객체
 
