@@ -6,7 +6,7 @@
 
 ## Hash 사용하는 컬렉션 비교하기
 
-이 컬렉션들은 모두 Hash 알고리즘을 사용한다. `Hashtable`과 `HashMap`은 Map 인터페이스를 구현한다. 즉, Key-Value 형식의 자료구조이다. Map 구현체에 Hash 알고리즘은, **Key값을 Hashing하여 인덱스로 사용**한다는 뜻이다.
+`Hashtable`, `HashMap`, `HashSet`은 모두 Hash 알고리즘을 사용한다. `Hashtable`과 `HashMap`은 Map 인터페이스를 구현한다. 즉, Key-Value 형식의 자료구조이다. Map 구현체에 Hash 알고리즘은, **Key값을 Hashing하여 인덱스로 사용**한다는 뜻이다.
 
 반면 `HashSet` 은 Set 인터페이스의 구현체이다. 즉 순서/중복없는 자료구조이다. 삽입되는 객체를 Key값으로 하고, 내부 구현 코드에서 필드로 선언한 객체를 Value 값으로 사용한다. 자세한 차이점은 다음과 같다.
 
