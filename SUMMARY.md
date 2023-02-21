@@ -22,7 +22,7 @@
   * [📦 Java Collections](java/java-collections/README.md)
     * [Hash를 사용하는 Collections](java/java-collections/collections\_hash.md)
     * [Tree를 사용하는 Collections](today-i-learned/java/java-collections/tree-collections.md)
-    * [Set  파헤치기](today-i-learned/java/java-collections/set.md)
+    * [Set 파헤치기](today-i-learned/java/java-collections/set.md)
     * [List 파헤치기](java/java-collections/collections\_list.md)
     * [Java Collections - Map](today-i-learned/java/java-collections/java-collections-map.md)
     * [Thread-Safe 클래스는 필요할 경우에만 쓰자](java/java-collections/collections\_warning.md)
@@ -94,11 +94,6 @@
     * [ch25 : Thread](today-i-learned/book/godofjava-12/ch25\_thread.md)
 * [🧹 Clean Coding](today-i-learned/clean-coding.md)
   * [if-else 대신 Enum 사용하기](today-i-learned/clean-coding/if-else-enum.md)
-
-## 🏙 Project
-
-* [☕ Cafemate](project/cafemate.md)
-* [🎵 MUrangE](project/murange.md)
 
 ## 📑 회고
 

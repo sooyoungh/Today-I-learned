@@ -1,4 +1,4 @@
-# Set  파헤치기
+# Set 파헤치기
 
 Set 인터페이스는 중복이 없는 자료구조(집합)를 구현할 때 사용한다. 대표적으로 `HashSet` , `LinkedHashSet` ,`TreeSet` 이 있다. 이 글에선 각 특징과 각 구현체들의 성능을 비교해보았다.
 
@@ -35,11 +35,11 @@ Hash는 Key와 Value가 일대일로 저장되는 자료구조이다. `HashSet`�
 
 * `Value(값)`으로 저장될 Dummy 객체
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * `add(데이터)`는 사실`put(데이터, 더미객체)`로 저장된다.
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -78,7 +78,7 @@ _`MILLISECONDS`_ 밀리초로 평균 속도를 측정해보았다. 100개일 때
 
 * `1_000_000`개 삽입 연산
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -93,7 +93,8 @@ Set 컬렉션에서 랜덤 값을 `10_000`번 검색하는 상황이다. (코드
         for (Integer searchNumber : randomNumbers) {
             hashSet.contains(searchNumber);
         }
-    }</code></pre>
+    }
+</code></pre>
 
 <figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
