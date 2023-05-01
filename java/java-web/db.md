@@ -28,29 +28,6 @@ DBMS(Oracle, MySQL 등)의 종류에 상관없이 하나의 JDBC API를 이용�
 
 `DB와 연결 → DB에 SQL 전송 → (DB에서 처리) → DB에서 결과 전송 → 연결 종료`
 
-```java
-String driverPath = "net.sourceforge.jtds.jdbc.Driver"; 
-String address = "jdbc:jtds:sqlserver://IP/DB";
-String userName = "user";
-String password = "password";
-String query = "SELECT ... where id = ?";
-try {
- Class.forName(driverPath); // 1. JDBC 드라이버 로딩
- Connection connection = DriverManager.getConnection(address, userName, password); // 2. 커넥션 생성
- PreparedStatement ps = con.prepareStatement(query); // 3. 쿼리문 실행
- ps.setString(1, id);
- ResultSet rs = get.executeQuery(); // 4. 결과
- while (rs.next()) {
-		// 결과로 로직 처리
-	}
-} catch (Exception e) { }
-} finally {
- rs.close(); // 6. 결과 종료
- ps.close(); // 7. 쿼리문 종료
-	connection.close() // 8. 커넥션 종료
-}
-```
-
 1. DB 서버 접속을 위해 JDBC 드라이버를 로드한다.
 2. DB Connection 객체를 생성한다\*\*(매 연결 시 Connection 객체를 생성해야함)\*\*.
 3. 쿼리를 수행하기 위한 PreparedStatement 객체를 생성한다.
@@ -88,10 +65,12 @@ try {
 
 > #### Statement보다 Prestatement을 사용하는 이유?
 >
-> 1.  특수 기호를 쉽게 처리할 수 있다.
+> 1. 보안을 위해 (SQL injection 방지용)\
+>
+> 2.  특수 기호를 쉽게 처리할 수 있다.
 >
 >     Statement는 ‘는 두번 써주어야하는 등 특수 기호 처리가 복잡하였다. Prestatement는 알아서 파싱해주므로 쉽게 처리할 수 있다.
-> 2.  Prestatement는 캐시를 사용한다.
+> 3.  Prestatement는 캐시를 사용한다.
 >
 >     반복 수행하는 쿼리일 경우 효율적이다. Prestatement는 처음 컴파일 후 캐시에 보관한다. 값을 지정하여 실행 시 재사용한다. DB에 부하가 적고 성능이 좋다.
 
