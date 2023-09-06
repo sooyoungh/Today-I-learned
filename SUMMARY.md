@@ -61,6 +61,8 @@
     * [어플리케이션 계층 2 - HTTPS와 SSL](network/ssl.md)
     * [어플리케이션 계층 3 - 쿠키와 세션](network/cookie\_session.md)
   * [💌 Database](database/README.md)
+    * [RDB vs NoSQL](today-i-learned/cs/database/rdb-vs-nosql/README.md)
+      * [RDB와 NoSQL의 차이 및 용도 비교](today-i-learned/cs/database/rdb-vs-nosql/rdb-nosql.md)
     * [JDBC - Class.forName() 동작 방식](database/classforname.md)
   * [💻 OS](os/README.md)
     * [프로세스와 스레드](os/proc\_thread.md)
