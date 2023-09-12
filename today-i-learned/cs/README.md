@@ -16,7 +16,7 @@ description: CS 중요한거나 헷갈리는 내용 글로 정리. 넘버링된 
 
 **어플리케이션 계층**
 
-1. ****[HTTP 알아보기](../../network/http.md)
+1. [HTTP 알아보기](../../network/http.md)
 2. [HTTPS와 SSL](../../network/ssl.md)
 3. [쿠키와 세션](../../network/cookie\_session.md)
 

@@ -10,7 +10,7 @@
 
 **어플리케이션 계층**
 
-1. ****[HTTP 알아보기](http.md)
+1. [HTTP 알아보기](http.md)
 2. [HTTPS와 SSL](ssl.md)
 3. [쿠키와 세션](cookie\_session.md)
 

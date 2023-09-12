@@ -78,7 +78,7 @@ _`MILLISECONDS`_ 밀리초로 평균 속도를 측정해보았다. 100개일 때
 
 * `1_000_000`개 삽입 연산
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 
 
