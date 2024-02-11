@@ -93,5 +93,11 @@
     * [ch23 : Collections - Set, Queue](today-i-learned/book/godofjava-12/ch23\_collections\_set\_queue.md)
     * [ch24 : Collections - Map](today-i-learned/book/godofjava-12/ch24\_collections\_map.md)
     * [ch25 : Thread](today-i-learned/book/godofjava-12/ch25\_thread.md)
-* [🧹 Clean Coding](today-i-learned/clean-coding.md)
-  * [if-else 대신 Enum 사용하기](today-i-learned/clean-coding/if-else-enum.md)
+  * [if-else 대신 Enum 사용하기](today-i-learned/book/if-else-enum.md)
+* [🍄 AWS](today-i-learned/aws/README.md)
+  * [Untitled](today-i-learned/aws/untitled.md)
+
+## 🥠 Projects
+
+* [Adventure Of Heendy](projects/adventure-of-heendy/README.md)
+  * [로그인](projects/adventure-of-heendy/undefined.md)
